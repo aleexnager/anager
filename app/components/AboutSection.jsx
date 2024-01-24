@@ -36,8 +36,8 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>
-          To this day my only experiences are part-time jobs which doesn't
-          really have to do this area. I'm motivated and willing to work
+          To this day my only experiences are part-time jobs which doesn&apos;t
+          really have to do this area. I&apos;m motivated and willing to work
         </li>
         <li>Help me get me get my first real job!</li>
       </ul>
