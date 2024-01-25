@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 const AnimatedNumbers = dynamic(
   () => {
-    return import("react-animated-numbers");
+    return import("reactAnimatedNumbers");
   },
   { ssr: false }
 );
