@@ -2,7 +2,6 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import { Content } from "next/font/google";
 
 const TAB_DATA = [
   {
