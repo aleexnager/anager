@@ -53,6 +53,8 @@ const AchievementsSection = () => {
                       mass: 1,
                       friction: 100,
                       tension: 140 * (index + 1),
+                      delay: 0.8,
+                      duration: 1,
                     };
                   }}
                 />

@@ -55,16 +55,24 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
+    <section id="about" className="text-white">
+      <br />
+      <br />
       <div className="md:grid md:grid-cols-2 gap-8 items-center px-4 py-8 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/la-rana-gustavo.jpg"
           alt="la rana gustavo"
           width={500}
           height={500}
+          className="rounded-3xl"
         />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+        <div className="mt-6 md:mt-0 text-left flex flex-col h-full">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            About{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+              Me
+            </span>
+          </h2>
           <p className="text-base md:text-lg">
             As an engineer student I have acquired a set of technical and
             analytical skills that enable me to efficiently solve complex
@@ -73,7 +81,7 @@ const AboutSection = () => {
             technologies, which allows me to quickly adapt to different
             environments and projects.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start mt-10">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -96,7 +104,7 @@ const AboutSection = () => {
               Experience/Certifications{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className="mt-6">
             {TAB_DATA.find((t) => t.id == tab).content}
           </div>
         </div>

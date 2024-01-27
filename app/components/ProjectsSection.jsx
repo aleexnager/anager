@@ -37,7 +37,7 @@ const projectsData = [
     title: "Project 4",
     description: "This is project 4",
     image: "/images/projects/project4.jpg",
-    tag: ["All", "Algorithm"],
+    tag: ["All", "Other"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -55,7 +55,7 @@ const projectsData = [
     title: "Project 6",
     description: "This is project 6",
     image: "/images/projects/project3.jpg",
-    tag: ["All", "Algorithm"],
+    tag: ["All", "Other"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -80,9 +80,14 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section ref={ref}>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+    <section id="projects" ref={ref}>
+      <br />
+      <br />
+      <h2 className="text-center text-4xl font-bold text-white mt-12 mb-4 md:mt-16 md:mb-6">
+        My{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+          Projects
+        </span>
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
@@ -97,8 +102,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Algorithm"
-          isSelected={tag === "Algorithm"}
+          name="Other"
+          isSelected={tag === "Other"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -108,7 +113,7 @@ const ProjectsSection = () => {
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.5, delay: index * 0.3 }}
+            transition={{ duration: 0.5, delay: index * 0.4 }}
           >
             <ProjectCard
               key={project.id}

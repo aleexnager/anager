@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import EmailSection from "./EmailSection";
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
@@ -36,16 +37,17 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-            nostrum atque magnam impedit, enim architecto autem vel, ratione non
-            asperiores hic recusandae ipsam alias voluptatem vero est at
-            repellendus molestiae.
+            Welcome to my website! I&apos;m a student at the Polytechnic
+            University of Madrid (UPM) studying computer science engineering.
+            I&apos;m passionate about technology and constantly seeking to learn
+            new things and stay up-to-date with the latest trends in the
+            computer world.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
+            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-black font-semibold">
               Hire Me
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white font-semibold mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
@@ -58,15 +60,20 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <motion.div
+            animate={{ translateY: [0, -20, 0] }}
+            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+            className="mt-2 md:mt-0 relative hidden md:block"
+          >
+            <div className="rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]"></div>
             <Image
-              src="/images/hero-image.png"
+              src="/images/la-rana-gustavo.jpg"
               alt="profile picture"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              className="absolute rounded-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              width={385}
+              height={385}
             />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
