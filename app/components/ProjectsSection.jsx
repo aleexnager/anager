@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 
 const projectsData = [
@@ -109,11 +110,11 @@ const ProjectsSection = () => {
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={`${tag}-${index}`}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.5, delay: index * 0.4 }}
+            transition={{ duration: 0.4, delay: index * 0.3 }}
           >
             <ProjectCard
               key={project.id}
@@ -127,6 +128,14 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
+      <Link href={"#projects"}>
+        <div className="relative group">
+          <button className="relative z-10 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-full w-9/12 lg:w-3/12 py-2 px-4 mt-8 mb-16 mx-auto">
+            See more
+          </button>
+          <div className="absolute inset-0 bg-primary-500 rounded-full blur opacity-75 w-9/12 lg:w-3/12 mx-auto transition duration-300 ease-in-out group-hover:blur-none"></div>
+        </div>
+      </Link>
     </section>
   );
 };

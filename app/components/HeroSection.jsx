@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import EmailSection from "./EmailSection";
 
 const HeroSection = () => {
   return (
@@ -44,14 +44,18 @@ const HeroSection = () => {
             computer world.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-black font-semibold">
-              Hire Me
-            </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white font-semibold mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
-            </button>
+            <Link href={"#contact"}>
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:text-white hover:from-secondary-500 hover:to-primary-500 text-black font-semibold">
+                Hire Me
+              </button>
+            </Link>
+            <Link href={""}>
+              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-secondary-500 hover:to-primary-500 text-white font-semibold mt-3">
+                <span className="block bg-[#121212] hover:text-[#121212] hover:bg-white rounded-full px-5 py-2">
+                  Download CV
+                </span>
+              </button>
+            </Link>
           </div>
         </motion.div>
         <motion.div
