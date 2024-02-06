@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
       <div className="p-12 flex justify-between w-full">
-        <span>A.NAGER</span>
+        <span>A.NÁGER</span>
         <p className="hidden lg:block text-slate-600">v1.5</p>
         <p className="text-slate-600">
           Copyright &copy; | All rights reserved.

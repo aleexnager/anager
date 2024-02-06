@@ -128,7 +128,7 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
-      <Link href={"#projects"}>
+      <Link href={"/projects"}>
         <div className="relative group">
           <button className="relative z-10 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-full w-9/12 lg:w-3/12 py-2 px-4 mt-8 mb-16 mx-auto">
             See more

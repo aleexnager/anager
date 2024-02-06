@@ -2,6 +2,7 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import Link from "next/link";
 
 const TAB_DATA = [
   {
@@ -108,6 +109,14 @@ const AboutSection = () => {
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
+        <Link href={"/resume"}>
+          <div className="relative group">
+            <button className="relative z-10 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-full w-9/12 lg:w-3/12 py-2 px-4 mt-8 mb-16 mx-auto">
+              See more
+            </button>
+            <div className="absolute inset-0 bg-primary-500 rounded-full blur opacity-75 w-9/12 lg:w-3/12 mx-auto transition duration-300 ease-in-out group-hover:blur-none"></div>
+          </div>
+        </Link>
       </div>
     </section>
   );

@@ -4,45 +4,52 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
-import ScrollSpy from "./ScrollSpy";
+import { useVisibilityOnScrollUp } from "use-visibility-on-scroll-up";
+import { motion } from "framer-motion";
 
 const navLinks = [
   {
+    title: "Home",
+    path: "/",
+  },
+  {
     title: "About",
-    path: "#about",
+    path: "/#about",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "/#contact",
   },
 ];
 
+const variants = {
+  open: { duration: 5.5, opacity: 1, y: 0 },
+  closed: { duration: 1.5, opacity: 0, y: "-100%" },
+};
+
 const Navbar = () => {
+  const { visible, lastScroll } = useVisibilityOnScrollUp();
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-
-  const handleSectionEnter = (id) => {
-    setActiveSection(id);
-  };
-
-  const handleSectionLeave = (id) => {
-    if (activeSection === id) {
-      setActiveSection("");
-    }
-  };
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100 border-l-transparent border-r-transparent border-t-transparent">
+    <motion.header
+      className={`fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100 border-l-transparent border-r-transparent border-t-transparent ${
+        visible || lastScroll === 0 ? "visible" : "hidden"
+      }`}
+      initial="closed"
+      animate={visible ? "open" : "closed"}
+      variants={variants}
+    >
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
           className="text-2xl md:text-3xl text-white font-semibold"
         >
-          ALEX NAGER
+          ALEX NÁGER
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -66,11 +73,6 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />
-                <ScrollSpy
-                  id={link.path.slice(1)}
-                  onEnter={handleSectionEnter}
-                  onLeave={handleSectionLeave}
-                />
               </li>
             ))}
           </ul>
@@ -79,7 +81,7 @@ const Navbar = () => {
       {navbarOpen ? (
         <MenuOverlay links={navLinks} setNavbarOpen={setNavbarOpen} />
       ) : null}
-    </nav>
+    </motion.header>
   );
 };
 
