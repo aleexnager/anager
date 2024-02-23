@@ -1,3 +1,64 @@
+import Link from "next/link";
+
+export const tabData = [
+  {
+    title: "Skills",
+    id: "skills",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Node.js</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+        <li>C</li>
+        <li>Java</li>
+        <li>Git</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Universidad Politecnica de Madrid (UPM)</li>
+        <li>Cambridge Assesment English, Advance C1 </li>
+        <li>International Baccalaurate (IB)</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Experience/Certifications",
+    id: "experience",
+    content: (
+      <ul className="list-disc pl-2">
+        <Link
+          href={
+            "https://www.cloudskillsboost.google/public_profiles/2952dff1-1d86-4783-bc9f-4e73341fb701/badges/8111161"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Introduction to Generative AI
+          </li>
+        </Link>
+        <Link
+          href={
+            "https://www.cloudskillsboost.google/public_profiles/2952dff1-1d86-4783-bc9f-4e73341fb701/badges/8083372"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Introduction to Responsible AI
+          </li>
+        </Link>
+        <li>
+          To this day my only experiences are part-time jobs which doesn&apos;t
+          really have to do this area. I&apos;m motivated and willing to work
+        </li>
+        <li>Help me get me get my first real job!</li>
+      </ul>
+    ),
+  },
+];
+
 export const categories = [
   {
     name: "All",

@@ -3,47 +3,7 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import Link from "next/link";
-
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>JavaScript</li>
-        <li>SQL</li>
-        <li>C</li>
-        <li>Java</li>
-        <li>Git</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Universidad Politecnica de Madrid (UPM)</li>
-        <li>Cambridge Assesment English, Advance C1 </li>
-        <li>International Baccalaurate (IB)</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Experience/Certifications",
-    id: "experience",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>
-          To this day my only experiences are part-time jobs which doesn&apos;t
-          really have to do this area. I&apos;m motivated and willing to work
-        </li>
-        <li>Help me get me get my first real job!</li>
-      </ul>
-    ),
-  },
-];
+import { tabData } from "../lib/constants";
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
@@ -107,7 +67,7 @@ const AboutSection = () => {
             </TabButton>
           </div>
           <div className="mt-6">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            {tabData.find((t) => t.id === tab).content}
           </div>
           <Link href={"/resume"}>
             <div className="relative group">
