@@ -14,6 +14,16 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
+    svgs: [
+      {
+        path: "m3 2 1.6 17.8L12 22l7.5-2.2L21 2H3Zm14 6H9l.2 2H17l-.6 6.6-4.2 1.4-4.3-1.4-.3-3h2l.2 1.4 2.4.8 2.3-.7.3-3H7.4L7 6h10.4L17 8Z",
+        fill: "red",
+      },
+      {
+        path: "m3 2 1.6 17.8L12 22l7.5-2.2L21 2H3Zm13.3 14.7L12 18l-4.3-1.2-.3-3.1h2.1l.2 1.5 2.3.6 2.3-.6.3-3H7.3l-.2-2h7.7l.1-2H7l-.2-2h10.6l-1 10.6Z",
+        fill: "cyan",
+      },
+    ],
   },
   {
     id: 2,
@@ -81,10 +91,10 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" ref={ref}>
+    <section id="projects" ref={ref} className="xl:mt-12">
       <br />
       <br />
-      <h2 className="text-center text-4xl font-bold text-white mt-12 mb-4 md:mt-16 md:mb-6">
+      <h2 className="text-center text-4xl font-bold text-white pt-12 md:pt-16">
         My{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
           Projects
@@ -107,7 +117,10 @@ const ProjectsSection = () => {
           isSelected={tag === "Other"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul
+        ref={ref}
+        className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12"
+      >
         {filteredProjects.map((project, index) => (
           <motion.li
             key={`${tag}-${index}`}
@@ -124,6 +137,7 @@ const ProjectsSection = () => {
               tags={project.tag}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              svgs={project.svgs}
             />
           </motion.li>
         ))}

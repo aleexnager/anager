@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
-import Cv from "../components/Cv";
+import Cv from "./components/Cv";
+import SwotAnalisis from "./components/SwotAnalisis";
 import Footer from "../components/Footer";
 
 export default function Resume() {
@@ -8,6 +9,7 @@ export default function Resume() {
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
         <Cv />
+        <SwotAnalisis />
       </div>
       <Footer />
     </main>

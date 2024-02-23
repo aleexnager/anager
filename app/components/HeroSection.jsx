@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import AchievementsSection from "./AchievementsSection";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <section id="home" className="mt-24 lg:py-16">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -26,13 +27,12 @@ const HeroSection = () => {
                 3000,
                 "a Web Developer",
                 3000,
-                "a Computer Science Engineer",
+                "a Computer Engineer",
                 3000,
               ]}
-              wrapper="span"
               speed={40}
+              deletionSpeed={60}
               cursor={true}
-              cursorStyle="_"
               repeat={Infinity}
             />
           </h1>
@@ -62,7 +62,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 place-self-center mt-8 lg:mt-0"
         >
           <motion.div
             animate={{ translateY: [0, -20, 0] }}
@@ -80,6 +80,7 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
+      <AchievementsSection />
     </section>
   );
 };
