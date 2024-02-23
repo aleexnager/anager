@@ -32,27 +32,27 @@ const SwotAnalisis = () => {
               onClick={() => setSelectedTab(tab.title)}
               whileHover={{
                 scaleX:
-                  window.innerWidth >= 1024
+                  typeof window !== "undefined" && window.innerWidth >= 1024
                     ? 1
-                    : window.innerWidth >= 768
+                    : typeof window !== "undefined" && window.innerWidth >= 768
                     ? 1
                     : 1.1,
                 scaleY:
-                  window.innerWidth >= 1024
+                  typeof window !== "undefined" && window.innerWidth >= 1024
                     ? 1.2
-                    : window.innerWidth >= 768
+                    : typeof window !== "undefined" && window.innerWidth >= 768
                     ? 1.1
                     : 1,
                 originX:
-                  window.innerWidth >= 1024
+                  typeof window !== "undefined" && window.innerWidth >= 1024
                     ? 0
-                    : window.innerWidth >= 768
+                    : typeof window !== "undefined" && window.innerWidth >= 768
                     ? 0
                     : 0.5,
                 originY:
-                  window.innerWidth >= 1024
+                  typeof window !== "undefined" && window.innerWidth >= 1024
                     ? 0
-                    : window.innerWidth >= 768
+                    : typeof window !== "undefined" && window.innerWidth >= 768
                     ? -0.5
                     : 0,
                 transition: { duration: 0.3 },
@@ -61,16 +61,20 @@ const SwotAnalisis = () => {
                 selectedTab === tab.title
                   ? {
                       scaleX:
+                        typeof window !== "undefined" &&
                         window.innerWidth >= 1024
                           ? 1
-                          : window.innerWidth >= 768
+                          : typeof window !== "undefined" &&
+                            window.innerWidth >= 768
                           ? 1
                           : 1.1,
                       originX: 0,
                       scaleY:
+                        typeof window !== "undefined" &&
                         window.innerWidth >= 1024
                           ? 1.2
-                          : window.innerWidth >= 768
+                          : typeof window !== "undefined" &&
+                            window.innerWidth >= 768
                           ? 1.15
                           : 1,
                       originY: 0,
