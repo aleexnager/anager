@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { version } from "../lib/constants";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -15,10 +16,15 @@ const Footer = () => {
       <div className="p-12 flex flex-row justify-between lg:grid lg:grid-cols-3 items-center w-full">
         <div className="grid grid-row-2 gap-1 text-left">
           <span className="text-white">A.NÁGER</span>
-          <p className="text-slate-600">Copyright © | All rights reserved.</p>
+          <p className="text-slate-600">
+            Copyright © | Personal information reserved.
+          </p>
+          <p className="text-slate-600 lg:hidden">{version}</p>
         </div>
 
-        <p className="hidden lg:block lg:text-center text-slate-600">v3.0</p>
+        <p className="hidden lg:block lg:text-center text-slate-600">
+          {version}
+        </p>
 
         <motion.div
           whileTap={{ scale: 0.9 }}
@@ -35,7 +41,7 @@ const Footer = () => {
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="3"
+                strokeWidth="2"
                 d="M12 6v13m0-13 4 4m-4-4-4 4"
               />
             </svg>

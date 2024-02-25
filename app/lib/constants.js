@@ -146,3 +146,5 @@ export const swotTabs = [
       "rounded-r-lg rounded-tl-lg md:rounded-none md:rounded-b-lg md:rounded-tl-lg",
   },
 ];
+
+export const version = "v3.0";
