@@ -1,14 +1,47 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
       <div className="p-12 flex flex-row justify-between lg:grid lg:grid-cols-3 items-center w-full">
-        <span className="text-left text-white">A.NÁGER</span>
+        <div className="grid grid-row-2 gap-1 text-left">
+          <span className="text-white">A.NÁGER</span>
+          <p className="text-slate-600">Copyright © | All rights reserved.</p>
+        </div>
+
         <p className="hidden lg:block lg:text-center text-slate-600">v3.0</p>
-        <p className="text-right text-slate-600">
-          Copyright &copy; | All rights reserved.
-        </p>
+
+        <motion.div
+          whileTap={{ scale: 0.9 }}
+          onClick={scrollToTop}
+          className="relative group flex justify-end"
+        >
+          <button className="relative py-3 px-3 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-xl">
+            <svg
+              className="w-7 h-7 z-20"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
+                d="M12 6v13m0-13 4 4m-4-4-4 4"
+              />
+            </svg>
+            <div className="absolute inset-0 bg-primary-500 rounded-xl blur opacity-75 transition duration-300 ease-in-out group-hover:blur-none z-10"></div>
+          </button>
+        </motion.div>
       </div>
     </footer>
   );

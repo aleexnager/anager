@@ -1,5 +1,5 @@
 import { Link as ScrollLink } from "react-scroll";
-import Link from "next/link";
+import Link from "next/link"; 
 
 const NavLink = ({ id, href, title, setNavbarOpen, isExternalPage }) => {
   console.log("isExternalPage", isExternalPage, id, href, title);
