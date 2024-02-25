@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-row-2 gap-1 text-left">
           <span className="text-white">A.NÁGER</span>
           <p className="text-slate-600">
-            Copyright © | Personal information reserved.
+            Copyright © | All personal information reserved.
           </p>
           <p className="text-slate-600 lg:hidden">{version}</p>
         </div>
