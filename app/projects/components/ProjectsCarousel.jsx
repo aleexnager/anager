@@ -60,10 +60,10 @@ const ProjectsCarousel = () => {
           onClick={handleVisibilityToggle}
           className="relative my-6 lg:my-8 py-2 px-8 md:px-12 xl:px-16 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-full"
         >
-          <span className="z-20">
+          <span className="z-10">
             {areTagsVisible ? "Hide Categories" : "Show Categories"}
           </span>
-          <div className="absolute inset-0 bg-primary-500 rounded-full blur opacity-75 transition duration-300 ease-in-out group-hover:blur-none z-10"></div>
+          <div className="absolute inset-0 bg-primary-500 rounded-full blur opacity-75 transition duration-300 ease-in-out group-hover:blur-none"></div>
         </button>
       </div>
 
