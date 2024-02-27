@@ -109,7 +109,7 @@ export const swotTabs = [
       "I am proactive and enthusiastic",
       "Willing to learn and improve",
     ],
-    class: "rounded-r-lg rounded-bl-lg",
+    class: "rounded-r-lg",
   },
   {
     title: "W",
@@ -143,7 +143,7 @@ export const swotTabs = [
       "Constantly changing technologies",
     ],
     class:
-      "rounded-r-lg rounded-tl-lg md:rounded-none md:rounded-b-lg md:rounded-tl-lg",
+      "rounded-l-lg",
   },
 ];
 

@@ -17,57 +17,32 @@ const SwotAnalisis = () => {
         Analysis
       </h1>
 
-      <div className="grid grid-cols-4 md:grid-cols-1 my-12 gap-x-1 md:gap-0 md:gap-y-2 lg:gap-y-3">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-1 md:gap-x-2 lg:gap-x-3">
+      <div className="grid grid-cols-1 my-12 gap-y-1 md:gap-y-2 lg:gap-y-3">
+        <div className="grid grid-cols-4 gap-1 md:gap-2 lg:gap-3">
           {swotTabs.map((tab) => (
             <motion.button
               key={tab.title}
               className={`w-100 md:w-full py-4 px-2 text-xl text-black font-bold rounded-lg ${
                 tab.color
               } ${
-                selectedTab === tab.title
-                  ? "rounded-none rounded-l-lg md:rounded-none md:rounded-t-lg"
-                  : ""
+                selectedTab === tab.title ? "rounded-none rounded-t-lg" : ""
               }`}
               onClick={() => setSelectedTab(tab.title)}
               whileHover={{
-                scaleX:
-                  typeof window !== "undefined" && window.innerWidth >= 1024
-                    ? 1
-                    : typeof window !== "undefined" && window.innerWidth >= 768
-                    ? 1
-                    : 1.1,
+                scaleX: 1,
                 scaleY:
                   typeof window !== "undefined" && window.innerWidth >= 1024
                     ? 1.2
                     : typeof window !== "undefined" && window.innerWidth >= 768
-                    ? 1.1
-                    : 1,
-                originX:
-                  typeof window !== "undefined" && window.innerWidth >= 1024
-                    ? 0
-                    : typeof window !== "undefined" && window.innerWidth >= 768
-                    ? 0
-                    : 0.5,
-                originY:
-                  typeof window !== "undefined" && window.innerWidth >= 1024
-                    ? 0
-                    : typeof window !== "undefined" && window.innerWidth >= 768
-                    ? -0.5
-                    : 0,
+                    ? 1.15
+                    : 1.075,
+                originY: 0,
                 transition: { duration: 0.3 },
               }}
               animate={
                 selectedTab === tab.title
                   ? {
-                      scaleX:
-                        typeof window !== "undefined" &&
-                        window.innerWidth >= 1024
-                          ? 1
-                          : typeof window !== "undefined" &&
-                            window.innerWidth >= 768
-                          ? 1
-                          : 1.1,
+                      scaleX: 1,
                       originX: 0,
                       scaleY:
                         typeof window !== "undefined" &&
@@ -76,7 +51,7 @@ const SwotAnalisis = () => {
                           : typeof window !== "undefined" &&
                             window.innerWidth >= 768
                           ? 1.15
-                          : 1,
+                          : 1.1,
                       originY: 0,
                     }
                   : { scale: 1 }
@@ -90,7 +65,7 @@ const SwotAnalisis = () => {
         {swotTabs.map((tab) => (
           <div
             key={tab.title}
-            className={`col-span-3 ${tab.class} ${
+            className={`col-span-3 rounded-b-lg ${tab.class} ${
               selectedTab === tab.title ? tab.color : "hidden"
             }`}
           >
