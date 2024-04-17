@@ -35,5 +35,7 @@ module.exports = {
       secondary: colors.yellow,
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

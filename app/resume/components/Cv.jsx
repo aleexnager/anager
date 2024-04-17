@@ -14,7 +14,7 @@ const Cv = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, type: "spring", stiffness: 150 }}
-          className="flex justify-center text-primary-500 font-bold text-5xl my-4"
+          className="flex justify-center font-bold text-5xl my-4"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
             Resume
@@ -116,11 +116,11 @@ const Cv = () => {
           <em>Student, Computer Science Engineering</em>
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Currently studying at Madrid and focused on
-          finishing my Bachelor's degreeand I will pursue a Master's degree in
+          finishing my Bachelor's degree and I will pursue a master's degree in
           Cybersecurity.
         </p>
         <p className="mb-3 lg:text-lg">
-          <b>Cambridge Assesment English</b>
+          <b>Cambridge Assessment English</b>
           <br />
           <em>Advanced C1</em>
           <br />

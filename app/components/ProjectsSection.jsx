@@ -4,73 +4,7 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
-
-const projectsData = [
-  {
-    id: 1,
-    title: "Project 1",
-    description: "This is project 1",
-    image: "/images/projects/project1.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-    svgs: [
-      {
-        path: "m3 2 1.6 17.8L12 22l7.5-2.2L21 2H3Zm14 6H9l.2 2H17l-.6 6.6-4.2 1.4-4.3-1.4-.3-3h2l.2 1.4 2.4.8 2.3-.7.3-3H7.4L7 6h10.4L17 8Z",
-        fill: "red",
-      },
-      {
-        path: "m3 2 1.6 17.8L12 22l7.5-2.2L21 2H3Zm13.3 14.7L12 18l-4.3-1.2-.3-3.1h2.1l.2 1.5 2.3.6 2.3-.6.3-3H7.3l-.2-2h7.7l.1-2H7l-.2-2h10.6l-1 10.6Z",
-        fill: "cyan",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    description: "This is project 2",
-    image: "/images/projects/project2.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "This is project 3",
-    image: "/images/projects/project3.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    description: "This is project 4",
-    image: "/images/projects/project4.jpg",
-    tag: ["All", "Other"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "Project 5",
-    description: "This is project 5",
-    image: "/images/projects/project5.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    description: "This is project 6",
-    image: "/images/projects/project3.jpg",
-    tag: ["All", "Other"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-];
+import { projectsData } from "../posts/projectsData";
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
@@ -83,7 +17,7 @@ const ProjectsSection = () => {
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
-  );
+  ).slice(0, 6); // mostrmos sólo los 6 primeros
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -119,7 +53,7 @@ const ProjectsSection = () => {
       </div>
       <ul
         ref={ref}
-        className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
       >
         {filteredProjects.map((project, index) => (
           <motion.li

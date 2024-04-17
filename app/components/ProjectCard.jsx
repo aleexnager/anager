@@ -1,6 +1,73 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { svgList } from "../lib/svgs";
+
+const handleSvg = (svgs) => {
+  return svgs.map((svg, index) => {
+    const svgData = svgList.find((item) => item.id === svg);
+    return (
+      <svg
+        key={index}
+        id={svgData.id}
+        className="w-10 h-10 text-white"
+        aria-hidden="true"
+        viewBox="0 0 128 128"
+        fill="currentColor"
+      >
+        {svgData.paths &&
+          svgData.paths.map((path, pathIndex) => (
+            <path key={pathIndex} fill={path.fill} d={path.d} />
+          ))}
+        {svgData.groups &&
+          svgData.groups.map((group, groupIndex) => (
+            <g key={groupIndex} fill={group.fill}>
+              {group.elements &&
+                group.elements.map((element, elementIndex) => {
+                  if (element.type === "circle") {
+                    return (
+                      <circle
+                        key={elementIndex}
+                        cx={element.cx}
+                        cy={element.cy}
+                        r={element.r}
+                      />
+                    );
+                  } else if (element.type === "path") {
+                    return <path key={elementIndex} d={element.d} />;
+                  }
+                  return null;
+                })}
+            </g>
+          ))}
+        {svgData.gradientDefs &&
+          svgData.gradientDefs.map((gradientDef, gradientIndex) => (
+            <defs key={gradientIndex}>
+              <linearGradient
+                id={gradientDef.id}
+                x1={gradientDef.x1}
+                x2={gradientDef.x2}
+                y1={gradientDef.y1}
+                y2={gradientDef.y2}
+                gradientTransform={gradientDef.gradientTransform}
+                gradientUnits={gradientDef.gradientUnits}
+              >
+                {gradientDef.stops &&
+                  gradientDef.stops.map((stop, stopIndex) => (
+                    <stop
+                      key={stopIndex}
+                      offset={stop.offset}
+                      stopColor={stop.stopColor}
+                      stopOpacity={stop.stopOpacity}
+                    />
+                  ))}
+              </linearGradient>
+            </defs>
+          ))}
+      </svg>
+    );
+  });
+}
 
 const ProjectCard = ({
   imgUrl,
@@ -16,6 +83,11 @@ const ProjectCard = ({
         className="h-52 md:h-72 rounded-t-xl relative group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       >
+        <div className="flex justify-end p-2">
+          <div className="flex bg-[#181818] bg-opacity-95 rounded-full gap-2 px-6 py-2">
+          {handleSvg(svgs)}
+          </div>
+        </div>
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-1000">
           <Link
             href={gitUrl}
@@ -31,26 +103,11 @@ const ProjectCard = ({
           </Link>
         </div>
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
+      <div className="rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
         <div className="flex justify-between">
           <div>
-            <h5 className="text-xl font-semibold mb-2">{title}</h5>
+            <h5 className="text-white text-xl font-semibold mb-2">{title}</h5>
             <p className="text-[#ADB7BE]">{description}</p>
-          </div>
-          <div className="flex gap-2">
-            {svgs &&
-              svgs.map((svg, index) => (
-                <svg
-                  key={index}
-                  className="w-12 h-12 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill={svg.fill}
-                  viewBox="0 0 24 24"
-                >
-                  <path d={svg.path} />
-                </svg>
-              ))}
           </div>
         </div>
       </div>

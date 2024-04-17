@@ -2,14 +2,14 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import ProjectTag from "../../components/ProjectTag";
-import SearchTool from "./SearchTool";
 import InfHorizontalScroll from "./InfHorizontalScroll";
 import { motion, useInView } from "framer-motion";
-import { projectsData } from "../../projectsData/projectsData";
+import { projectsData } from "../../posts/projectsData";
 import { categories } from "../../lib/constants";
 
 const ProjectsCarousel = () => {
   const [tags, setTags] = useState(["All"]);
+  const [searchQuery, setSearchQuery] = useState("");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -27,9 +27,15 @@ const ProjectsCarousel = () => {
     }
   };
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.some((tag) => tags.includes(tag))
-  );
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const filteredProjects = projectsData.filter((project) => {
+    const matchesTags = project.tag.some((tag) => tags.includes(tag));
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesTags && matchesSearch;
+  });
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -51,8 +57,36 @@ const ProjectsCarousel = () => {
             Projects
           </span>
         </h2>
-
-        <SearchTool />
+        <div className="block py-6 mt-4 w-full md:w-1/2">
+          <label htmlFor="topbar-search" className="sr-only">
+            Search
+          </label>
+          <div className="relative">
+            <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <svg
+                className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="text"
+              name="email"
+              id="topbar-search"
+              className="bg-gray-50 border border-[#33353F] text-gray-900 text-sm rounded-full focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={handleSearch}
+            />
+          </div>
+        </div>
       </div>
 
       <div className="relative group my-8">
@@ -81,7 +115,7 @@ const ProjectsCarousel = () => {
 
       <ul
         ref={ref}
-        className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
       >
         {filteredProjects.map((project, index) => (
           <motion.li
