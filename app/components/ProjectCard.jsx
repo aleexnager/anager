@@ -80,8 +80,8 @@ const ProjectCard = ({
   return (
     <div>
       <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+        className="h-60 md:h-72 rounded-t-xl relative group"
+        style={{ background: `url(${imgUrl})`, backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <div className="flex justify-end p-2">
           <div className="flex bg-[#181818] bg-opacity-95 rounded-full gap-2 px-6 py-2">

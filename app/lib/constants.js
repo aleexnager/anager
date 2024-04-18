@@ -21,8 +21,8 @@ export const tabData = [
     content: (
       <ul className="list-disc pl-2">
         <li>Universidad Politecnica de Madrid (UPM)</li>
-        <li>Cambridge Assesment English, Advance C1 </li>
-        <li>International Baccalaurate (IB)</li>
+        <li>Cambridge Assessment English, Advance C1 </li>
+        <li>International Baccalaurate (IB diploma)</li>
       </ul>
     ),
   },
@@ -147,4 +147,4 @@ export const swotTabs = [
   },
 ];
 
-export const version = "v3.0";
+export const version = "v3.6";

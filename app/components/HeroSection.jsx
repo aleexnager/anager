@@ -7,6 +7,28 @@ import { motion } from "framer-motion";
 import AchievementsSection from "./AchievementsSection";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const downloadCV = () => {
+    const pdfURL = "../../public/docs/cvEsp.pdf"; // URL del archivo PDF
+    
+    const link = document.createElement("a"); // Crea un enlace temporal
+    link.href = pdfURL;
+    link.target = "_blank"; // Abre en una nueva pestaña
+    link.download = "CV_AlejanroNager.pdf"; // Nombre del archivo que se descargará
+    
+    document.body.appendChild(link); // Simula un clic en el enlace
+    link.click();
+    
+    document.body.removeChild(link); // Elimina el enlace temporal
+  };
+  
+
   return (
     <section id="home" className="mt-24 lg:py-16">
       <div className="grid grid-cols-1 lg:grid-cols-12">
@@ -44,17 +66,21 @@ const HeroSection = () => {
             computer world.
           </p>
           <div>
-            <Link href={"#contact"}>
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:text-white hover:from-secondary-500 hover:to-primary-500 text-black font-semibold">
-                Hire Me
-              </button>
-            </Link>
+            <motion.button 
+              onClick={scrollToContact}
+              whileTap={{ scale: 0.7 }}
+              className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:text-white hover:from-secondary-500 hover:to-primary-500 text-black font-semibold">
+                Contact Me
+            </motion.button>
             <Link href={""}>
-              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-secondary-500 hover:to-primary-500 text-white font-semibold hover:font-bold mt-3">
+              <motion.button
+                onClick={downloadCV}
+                whileTap={{ scale: 0.7 }}
+                className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-secondary-500 hover:to-primary-500 text-white font-semibold hover:font-bold mt-3">
                 <span className="block bg-[#121212] hover:text-[#121212] hover:bg-white rounded-full px-5 py-2">
                   Download CV
                 </span>
-              </button>
+              </motion.button>
             </Link>
           </div>
         </motion.div>

@@ -6,7 +6,7 @@ import { version } from "../lib/constants";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,
+      top: 0, 
       behavior: "smooth",
     });
   };
@@ -27,7 +27,7 @@ const Footer = () => {
         </p>
 
         <motion.div
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 0.7 }}
           onClick={scrollToTop}
           className="relative group flex justify-end"
         >
