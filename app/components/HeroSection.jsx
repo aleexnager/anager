@@ -15,17 +15,12 @@ const HeroSection = () => {
   };
 
   const downloadCV = () => {
-    const pdfURL = "../../public/docs/cvEsp.pdf"; // URL del archivo PDF
+    const pdfURL = "/docs/cvEsp.pdf"; // URL del archivo PDF
     
     const link = document.createElement("a"); // Crea un enlace temporal
     link.href = pdfURL;
-    link.target = "_blank"; // Abre en una nueva pestaña
     link.download = "CV_AlejanroNager.pdf"; // Nombre del archivo que se descargará
-    
-    document.body.appendChild(link); // Simula un clic en el enlace
     link.click();
-    
-    document.body.removeChild(link); // Elimina el enlace temporal
   };
   
 

@@ -1216,8 +1216,8 @@ video {
 .h-5 {
   height: 1.25rem;
 }
-.h-52 {
-  height: 13rem;
+.h-60 {
+  height: 15rem;
 }
 .h-7 {
   height: 1.75rem;
@@ -1236,15 +1236,6 @@ video {
 }
 .h-full {
   height: 100%;
-}
-.h-20 {
-  height: 5rem;
-}
-.h-72 {
-  height: 18rem;
-}
-.h-60 {
-  height: 15rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1282,18 +1273,8 @@ video {
 .w-full {
   width: 100%;
 }
-.w-20 {
-  width: 5rem;
-}
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
 .max-w-md {
   max-width: 28rem;
-}
-.max-w-2 {
-  max-width: 0.5rem;
 }
 .grow {
   flex-grow: 1;
@@ -1342,12 +1323,6 @@ video {
 }
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
@@ -1547,9 +1522,6 @@ video {
 .bg-opacity-95 {
   --tw-bg-opacity: 0.95;
 }
-.bg-opacity-90 {
-  --tw-bg-opacity: 0.9;
-}
 .bg-\[radial-gradient\(ellipse_at_center\2c _var\(--tw-gradient-stops\)\)\] {
   background-image: radial-gradient(ellipse at center, var(--tw-gradient-stops));
 }
@@ -1583,18 +1555,9 @@ video {
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
-.bg-cover {
-  background-size: cover;
-}
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
-}
-.bg-center {
-  background-position: center;
-}
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 .p-12 {
   padding: 3rem;
@@ -1932,12 +1895,6 @@ body {
   text-decoration-line: underline;
 }
 
-.hover\:shadow-lg:hover {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .focus\:border-primary-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
@@ -1985,10 +1942,6 @@ body {
 
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:justify-start {
-    justify-content: flex-start;
   }
 
   .sm\:py-16 {
@@ -2041,26 +1994,6 @@ body {
 
   .md\:h-72 {
     height: 18rem;
-  }
-
-  .md\:h-10 {
-    height: 2.5rem;
-  }
-
-  .md\:h-20 {
-    height: 5rem;
-  }
-
-  .md\:h-52 {
-    height: 13rem;
-  }
-
-  .md\:h-40 {
-    height: 10rem;
-  }
-
-  .md\:h-60 {
-    height: 15rem;
   }
 
   .md\:w-1\/2 {
