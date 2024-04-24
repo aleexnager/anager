@@ -45,7 +45,6 @@ const Cv = () => {
             onClick={downloadCVInf}
             whileTap={{ scale: 0.7 }}
             transition={{ scale: {duration: 0.2} }}
-            className="border"
           >
             <p>INFOGRAPHIC MODEL AVAILABLE!</p>
           </motion.button>

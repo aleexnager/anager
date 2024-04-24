@@ -26,7 +26,7 @@ const Footer = () => {
           {version}
         </p>
 
-        <div className="border relative group flex justify-end">
+        <div className="relative group flex justify-end">
           <motion.button 
           onClick={scrollToTop}
           whileTap={{ scale: 0.7 }}
