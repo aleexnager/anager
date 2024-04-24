@@ -63,6 +63,7 @@ const HeroSection = () => {
             <motion.button 
               onClick={scrollToContact}
               whileTap={{ scale: 0.7 }}
+              transition={{ scale: {duration: 0.2} }}
               className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:text-white hover:from-secondary-500 hover:to-primary-500 text-black font-semibold">
                 Contact Me
             </motion.button>

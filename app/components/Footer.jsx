@@ -26,12 +26,13 @@ const Footer = () => {
           {version}
         </p>
 
-        <motion.div
-          whileTap={{ scale: 0.7 }}
+        <div className="border relative group flex justify-end">
+          <motion.button 
           onClick={scrollToTop}
-          className="relative group flex justify-end"
-        >
-          <button className="relative py-3 px-3 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-xl">
+          whileTap={{ scale: 0.7 }}
+          transition={{ scale: {duration: 0.2} }}
+          className="relative py-3 px-3 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-xl"
+          >
             <svg
               className="w-7 h-7 z-20"
               xmlns="http://www.w3.org/2000/svg"
@@ -46,8 +47,8 @@ const Footer = () => {
               />
             </svg>
             <div className="absolute inset-0 bg-primary-500 rounded-xl blur opacity-75 transition duration-300 ease-in-out group-hover:blur-none z-10"></div>
-          </button>
-        </motion.div>
+          </motion.button>
+        </div>
       </div>
     </footer>
   );

@@ -5,13 +5,22 @@ import { motion } from "framer-motion";
 
 const Cv = () => {
 
-  const downloadCV = () => {
+  const downloadCVInf = () => {
     const pdfURL = "/docs/Alejandro\ Náger\ CV\ infográfico.pdf"; // URL del archivo PDF
     const link = document.createElement("a"); // Crea un enlace temporal
     link.href = pdfURL;
     link.download = "Alejandro Náger CV infográfico.pdf"; // Nombre del archivo que se descargará
     link.click();
   }
+
+  const downloadCV = () => {
+    const pdfURL = "/docs/Alejandro\ Náger\ CV.pdf"; // URL del archivo PDF
+    const link = document.createElement("a"); // Crea un enlace temporal
+    link.href = pdfURL;
+    link.download = "Alejandro Náger CV.pdf"; // Nombre del archivo que se descargará
+    link.click();
+  };
+  
   return (
     <section id="about" className="lg:mx-10">
       <div className="lg:mx-10">
@@ -33,8 +42,10 @@ const Cv = () => {
           className="flex justify-center hover:text-primary-500 hover:underline lg:text-xl"
         >
           <motion.button
-            onClick={downloadCV}
+            onClick={downloadCVInf}
             whileTap={{ scale: 0.7 }}
+            transition={{ scale: {duration: 0.2} }}
+            className="border"
           >
             <p>INFOGRAPHIC MODEL AVAILABLE!</p>
           </motion.button>
@@ -44,7 +55,7 @@ const Cv = () => {
             Alejandro Náger
           </h1>
           <div className="flex flex-row gap-3 mr-4 lg:mr-6 my-2">
-            <Link href={""}>
+            <button onClick={downloadCV}>
               <svg
                 className="w-[36px] h-[36px] bg-transparent text-white hover:text-primary-500"
                 aria-hidden="true"
@@ -60,7 +71,7 @@ const Cv = () => {
                   d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"
                 />
               </svg>
-            </Link>
+            </button>
             <Link href="https://www.linkedin.com/in/anager/">
               <svg
                 className="w-[36px] h-[36px] bg-transparent text-white hover:text-primary-500"

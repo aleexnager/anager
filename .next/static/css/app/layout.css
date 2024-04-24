@@ -1363,9 +1363,6 @@ video {
 .gap-4 {
   gap: 1rem;
 }
-.gap-6 {
-  gap: 1.5rem;
-}
 .gap-8 {
   gap: 2rem;
 }
@@ -1676,9 +1673,6 @@ video {
   font-size: 3rem;
   line-height: 1;
 }
-.text-\[12px\] {
-  font-size: 12px;
-}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1722,10 +1716,6 @@ video {
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
