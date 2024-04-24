@@ -35,8 +35,8 @@ export const projectsData = [
     description: "Lyon metro system with shortest path search.",
     image: "/images/projects/aStarAlgorythm.png",
     tag: ["All", "IA & Machine Learning", "Other"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/aleexnager/IA",
+    previewUrl: "../posts/aStarAlgorythm",
     svgs: ["python"],
   },
   {

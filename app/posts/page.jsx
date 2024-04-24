@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getAllPostsMeta } from "../lib/mdx";
+import ProjectCard from "../components/ProjectCard";
 import Navbar from "../components/Navbar";
+import ProjectsCarousel from "./components/ProjectsCarousel";
 import Footer from "../components/Footer";
 
 const Post = async () => {
@@ -10,7 +12,9 @@ const Post = async () => {
     <section className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
-        <div className="flex gap-6 mt-6">
+        <ul
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+        >
           {posts?.map((post) => (
             <Link
               href={`posts/${post.slug}`}
@@ -19,12 +23,10 @@ const Post = async () => {
             >
               <h3 className="text-xl font-semibold">{post.title}</h3>
               <p className="mt-4 text-sm">{post.description}</p>
-              <time className="text-[12px] text-gray-400">
-                {post.publishDate}
-              </time>
             </Link>
           ))}
-        </div>
+        </ul>
+        <ProjectsCarousel />
       </div>
       <Footer />
     </section>

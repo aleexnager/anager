@@ -4,6 +4,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Cv = () => {
+
+  const downloadCV = () => {
+    const pdfURL = "/docs/Alejandro\ Náger\ CV\ infográfico.pdf"; // URL del archivo PDF
+    const link = document.createElement("a"); // Crea un enlace temporal
+    link.href = pdfURL;
+    link.download = "Alejandro Náger CV infográfico.pdf"; // Nombre del archivo que se descargará
+    link.click();
+  }
   return (
     <section id="about" className="lg:mx-10">
       <div className="lg:mx-10">
@@ -20,11 +28,16 @@ const Cv = () => {
             Resume
           </span>
         </motion.h1>
-        <Link
+        <Link 
           href={""}
           className="flex justify-center hover:text-primary-500 hover:underline lg:text-xl"
         >
-          <p>INFOGRAPHIC MODEL AVAILABLE!</p>
+          <motion.button
+            onClick={downloadCV}
+            whileTap={{ scale: 0.7 }}
+          >
+            <p>INFOGRAPHIC MODEL AVAILABLE!</p>
+          </motion.button>
         </Link>
         <div className="flex flex-row justify-between items-center bg-[#33353F] rounded-md my-10 lg:my-12 p-2">
           <h1 className="font-semibold text-2xl lg:text-3xl ml-4 lg:ml-6 my-2 mr-8">
@@ -48,7 +61,7 @@ const Cv = () => {
                 />
               </svg>
             </Link>
-            <Link href="https://www.linkedin.com/in/alejandro-náger-95b1791b7/">
+            <Link href="https://www.linkedin.com/in/anager/">
               <svg
                 className="w-[36px] h-[36px] bg-transparent text-white hover:text-primary-500"
                 aria-hidden="true"
