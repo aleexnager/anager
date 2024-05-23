@@ -21,8 +21,8 @@ const AboutSection = () => {
       <br />
       <div className="md:grid md:grid-cols-2 gap-8 items-center px-4 pt-12 xl:gap-16 sm:py-16 xl:px-16">
         <Image
-          src="/images/la-rana-gustavo.jpg"
-          alt="la rana gustavo"
+          src="/images/foto-perfil.JPG"
+          alt="Mexico!"
           width={500}
           height={500}
           className="rounded-3xl"

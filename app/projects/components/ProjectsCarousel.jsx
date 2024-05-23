@@ -126,11 +126,9 @@ const ProjectsCarousel = () => {
             transition={{ duration: 0.4, delay: index * 0.3 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}
-              tags={project.tag}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
               svgs={project.svgs}

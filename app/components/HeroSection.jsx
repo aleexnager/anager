@@ -71,6 +71,7 @@ const HeroSection = () => {
               <motion.button
                 onClick={downloadCV}
                 whileTap={{ scale: 0.7 }}
+                transition={{ scale: {duration: 0.2} }}
                 className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-secondary-500 hover:to-primary-500 text-white font-semibold hover:font-bold mt-3">
                 <span className="block bg-[#121212] hover:text-[#121212] hover:bg-white rounded-full px-5 py-2">
                   Download CV
