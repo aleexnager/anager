@@ -36,7 +36,7 @@ export const projectsData = [
     image: "/images/projects/aStarAlgorythm.png",
     tag: ["All", "IA & Machine Learning", "Other"],
     gitUrl: "https://github.com/aleexnager/IA",
-    previewUrl: "../posts/aStarAlgorythm",
+    previewUrl: "/",
     svgs: ["python"],
   },
   {
@@ -59,18 +59,17 @@ export const projectsData = [
     previewUrl: "/",
     svgs: ["javascript", "nextjs", "tailwind",],
   },
-  /*{
-    id: 7,
-    title: "Project 7",
-    description: "This is project 7",
-    image: "/images/projects/project6.jpg",
-    tag: ["All", "Other"],
-    gitUrl: "/",
-    previewUrl: "/",
-    svgs: [
-    ],
-  },
   {
+    id: 7,
+    title: "Input/Output via interruptions",
+    description: "Motorola assembly language project.",
+    image: "/images/projects/E-S-controller.jpg",
+    tag: ["All", "Architecture"],
+    gitUrl: "https://github.com/aleexnager/E-S-mediante-interrupciones",
+    previewUrl: "/",
+    svgs: ["emacs"],
+  },
+  /*{
     id: 8,
     title: "Project 8",
     description: "This is project 8",
