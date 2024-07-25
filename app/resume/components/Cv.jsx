@@ -4,23 +4,22 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Cv = () => {
-
   const downloadCVInf = () => {
-    const pdfURL = "/docs/Alejandro\ Náger\ CV\ infográfico.pdf"; // URL del archivo PDF
+    const pdfURL = "/docs/Alejandro Náger CV infográfico.pdf"; // URL del archivo PDF
     const link = document.createElement("a"); // Crea un enlace temporal
     link.href = pdfURL;
     link.download = "Alejandro Náger CV infográfico.pdf"; // Nombre del archivo que se descargará
     link.click();
-  }
+  };
 
   const downloadCV = () => {
-    const pdfURL = "/docs/Alejandro\ Náger\ CV.pdf"; // URL del archivo PDF
+    const pdfURL = "/docs/Alejandro Náger CV.pdf"; // URL del archivo PDF
     const link = document.createElement("a"); // Crea un enlace temporal
     link.href = pdfURL;
     link.download = "Alejandro Náger CV.pdf"; // Nombre del archivo que se descargará
     link.click();
   };
-  
+
   return (
     <section id="about" className="lg:mx-10">
       <div className="lg:mx-10">
@@ -37,14 +36,14 @@ const Cv = () => {
             Resume
           </span>
         </motion.h1>
-        <Link 
+        <Link
           href={""}
           className="flex justify-center hover:text-primary-500 hover:underline lg:text-xl"
         >
           <motion.button
             onClick={downloadCVInf}
             whileTap={{ scale: 0.7 }}
-            transition={{ scale: {duration: 0.2} }}
+            transition={{ scale: { duration: 0.2 } }}
           >
             <p>INFOGRAPHIC MODEL AVAILABLE!</p>
           </motion.button>
@@ -111,11 +110,12 @@ const Cv = () => {
           Technical Skills
         </h1>
         <p className="mb-3 lg:text-lg">
-          <b>Programming Languages:</b> Java, JavaScript, C, Python, SQL, HTML,
-          CSS.
+          <b>Programming Languages:</b> Java, JavaScript, C, C#, Python, SQL,
+          HTML, CSS.
         </p>
         <p className="mb-3 lg:text-lg">
-          <b>Technologies/Frameworks:</b> React, Node.js, Git, AWS, Docker.
+          <b>Technologies/Frameworks:</b> NEXT.js, .NET Core, Entity Framework,
+          Git, AWS, Docker.
         </p>
         <p className="mb-9 lg:text-lg lg:mb-12">
           <b>Developer Tools:</b> Visual Studio Code, IntelliJ IDEA, Eclipse,
@@ -164,9 +164,15 @@ const Cv = () => {
           Professional Experience
         </h1>
         <p className="mb-3 lg:text-lg">
-          &nbsp;&nbsp;&nbsp;&nbsp;I&apos;ve done many projects in order to
-          obtain personal experience and learn about modern technologies. You
-          can check them out{" "}
+          &nbsp;&nbsp;&nbsp;&nbsp;I have experience as a Full Stack Software
+          Engineer working with .NET. Here I learnd about databases, web
+          management and teamworking. I would love to start working as a
+          cybersecurity engineer as soon as I finish my bachelor studies.
+        </p>
+        <p className="mb-9 lg:text-lg lg:mb-12">
+          &nbsp;&nbsp;&nbsp;&nbsp;Apart from that I&apos;ve done many projects
+          in order to obtain personal experience and learn about modern
+          technologies. You can check them out{" "}
           <Link
             href={"../projects"}
             className="underline font-semibold hover:text-primary-500"
@@ -174,12 +180,6 @@ const Cv = () => {
             here
           </Link>
           .
-        </p>
-        <p className="mb-9 lg:text-lg lg:mb-12">
-          &nbsp;&nbsp;&nbsp;&nbsp;To this day my only experiences are part-time
-          jobs which doesn't really have to do with this area and my personal
-          projects. I'm motivated and willing to work. Help me get me get my
-          first real job!
         </p>
       </div>
     </section>

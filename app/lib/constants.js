@@ -6,7 +6,7 @@ export const tabData = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
+        <li>NEXT.js</li>
         <li>JavaScript</li>
         <li>SQL</li>
         <li>C</li>
@@ -33,6 +33,15 @@ export const tabData = [
       <ul className="list-disc pl-2">
         <Link
           href={
+            "https://www.linkedin.com/in/anager/"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Full Stack Software Engineer .NET
+          </li>
+        </Link>
+        <Link
+          href={
             "https://www.cloudskillsboost.google/public_profiles/2952dff1-1d86-4783-bc9f-4e73341fb701/badges/8111161"
           }
         >
@@ -49,11 +58,6 @@ export const tabData = [
             Introduction to Responsible AI
           </li>
         </Link>
-        <li>
-          To this day my only experiences are part-time jobs which doesn&apos;t
-          really have to do this area. I&apos;m motivated and willing to work
-        </li>
-        <li>Help me get me get my first real job!</li>
       </ul>
     ),
   },
