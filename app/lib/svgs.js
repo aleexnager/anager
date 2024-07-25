@@ -1,6 +1,6 @@
 import path from "path";
 
-export const svgList = [
+/*export const svgList = [
   {
     id: "html",
     paths: [
@@ -324,6 +324,7 @@ export const svgList = [
     id: "aws",
     paths: [
       {
+        fill: "",
         d: "M36.379 53.64c0 1.56.168 2.825.465 3.75.336.926.758 1.938 1.347 3.032.207.336.293.672.293.969 0 .418-.254.84-.8 1.261l-2.653 1.77c-.379.25-.758.379-1.093.379-.422 0-.844-.211-1.266-.59a13.28 13.28 0 0 1-1.516-1.98 34.153 34.153 0 0 1-1.304-2.485c-3.282 3.875-7.41 5.813-12.38 5.813-3.535 0-6.355-1.012-8.421-3.032-2.063-2.023-3.114-4.718-3.114-8.086 0-3.578 1.262-6.484 3.833-8.671 2.566-2.192 5.976-3.286 10.316-3.286 1.43 0 2.902.125 4.46.336 1.56.211 3.161.547 4.845.926v-3.074c0-3.2-.676-5.43-1.98-6.734C26.061 32.633 23.788 32 20.546 32c-1.473 0-2.988.168-4.547.547a33.416 33.416 0 0 0-4.547 1.433c-.676.293-1.18.461-1.473.547-.296.082-.507.125-.675.125-.59 0-.883-.422-.883-1.304v-2.063c0-.676.082-1.18.293-1.476.21-.293.59-.586 1.18-.883 1.472-.758 3.242-1.39 5.304-1.895 2.063-.547 4.254-.8 6.57-.8 5.008 0 8.672 1.136 11.032 3.41 2.316 2.273 3.492 5.726 3.492 10.359v13.64Zm-17.094 6.403c1.387 0 2.82-.254 4.336-.758 1.516-.508 2.863-1.433 4-2.695.672-.8 1.18-1.684 1.43-2.695.254-1.012.422-2.23.422-3.665v-1.765a34.401 34.401 0 0 0-3.871-.719 31.816 31.816 0 0 0-3.961-.25c-2.82 0-4.883.547-6.274 1.684-1.387 1.136-2.062 2.734-2.062 4.84 0 1.98.504 3.453 1.558 4.464 1.012 1.051 2.485 1.559 4.422 1.559Zm33.809 4.547c-.758 0-1.262-.125-1.598-.422-.34-.254-.633-.84-.887-1.64L40.715 29.98c-.25-.843-.38-1.39-.38-1.687 0-.672.337-1.05 1.013-1.05h4.125c.8 0 1.347.124 1.644.421.336.25.59.84.84 1.64l7.074 27.876 6.57-27.875c.208-.84.462-1.39.797-1.64.34-.255.93-.423 1.688-.423h3.367c.8 0 1.348.125 1.684.422.336.25.633.84.8 1.64l6.653 28.212 7.285-28.211c.25-.84.547-1.39.84-1.64.336-.255.887-.423 1.644-.423h3.914c.676 0 1.055.336 1.055 1.051 0 .21-.043.422-.086.676-.043.254-.125.59-.293 1.05L80.801 62.57c-.254.84-.547 1.387-.887 1.64-.336.255-.883.423-1.598.423h-3.62c-.801 0-1.348-.13-1.684-.422-.34-.297-.633-.844-.801-1.684l-6.527-27.16-6.485 27.117c-.21.844-.46 1.391-.8 1.684-.337.297-.926.422-1.684.422Zm54.105 1.137c-2.187 0-4.379-.254-6.484-.758-2.106-.504-3.746-1.055-4.84-1.684-.676-.379-1.137-.8-1.305-1.18a2.919 2.919 0 0 1-.254-1.18v-2.148c0-.882.336-1.304.97-1.304.25 0 .503.043.757.129.25.082.629.25 1.05.418a23.102 23.102 0 0 0 4.634 1.476c1.683.336 3.324.504 5.011.504 2.653 0 4.715-.465 6.145-1.39 1.433-.926 2.191-2.274 2.191-4 0-1.18-.379-2.145-1.136-2.946-.758-.8-2.192-1.516-4.254-2.191l-6.106-1.895c-3.074-.969-5.348-2.398-6.734-4.293-1.39-1.855-2.106-3.918-2.106-6.105 0-1.77.38-3.328 1.137-4.676a10.829 10.829 0 0 1 3.031-3.453c1.262-.965 2.696-1.684 4.38-2.188 1.683-.504 3.452-.715 5.304-.715.926 0 1.894.043 2.82.168.969.125 1.852.293 2.738.461.84.211 1.641.422 2.399.676.758.254 1.348.504 1.77.758.59.336 1.011.672 1.261 1.05.254.34.379.802.379 1.391v1.98c0 .884-.336 1.348-.969 1.348-.336 0-.883-.171-1.597-.507-2.403-1.094-5.098-1.641-8.086-1.641-2.399 0-4.293.379-5.598 1.18-1.309.797-1.98 2.02-1.98 3.746 0 1.18.421 2.191 1.261 2.988.844.8 2.403 1.602 4.633 2.316l5.98 1.895c3.032.969 5.22 2.316 6.524 4.043 1.305 1.727 1.938 3.707 1.938 5.895 0 1.812-.38 3.453-1.094 4.882-.758 1.434-1.77 2.696-3.074 3.707-1.305 1.051-2.864 1.809-4.672 2.36-1.895.586-3.875.883-6.024.883Zm0 0",
       },
       {
@@ -410,4 +411,451 @@ export const svgList = [
       },
     ],
   },
+  {
+    id: "boostrap",
+    paths: [
+      {
+        fill: "url(#a)",
+        d:
+          "M14.985 27.712c-.237-6.815 5.072-13.099 12.249-13.099h73.54c7.177 0 12.486 6.284 12.249 13.099-.228 6.546.068 15.026 2.202 21.94 2.141 6.936 5.751 11.319 11.664 11.883v6.387c-5.913.564-9.523 4.947-11.664 11.883-2.134 6.914-2.43 15.394-2.202 21.94.237 6.815-5.072 13.098-12.249 13.098h-73.54c-7.177 0-12.486-6.284-12.249-13.098.228-6.546-.068-15.026-2.203-21.94-2.14-6.935-5.76-11.319-11.673-11.883v-6.387c5.913-.563 9.533-4.947 11.673-11.883 2.135-6.914 2.43-15.394 2.203-21.94z",
+      },
+      {
+        fill: "url(#b)",
+        d:
+          "M267.1 364.46c47.297 0 75.798-23.158 75.798-61.355 0-28.873-20.336-49.776-50.532-53.085v-1.203c22.185-3.609 39.594-24.211 39.594-47.219 0-32.783-25.882-54.138-65.322-54.138h-88.74v217zm-54.692-189.48h45.911c24.958 0 39.131 11.128 39.131 31.279 0 21.505-16.484 33.535-46.372 33.535h-38.67zm0 161.96v-71.431h45.602c32.661 0 49.608 12.03 49.608 35.49 0 23.459-16.484 35.941-47.605 35.941z",
+        filter: "url(#c)",
+        transform: "translate(1.494 2.203) scale(.24566)",
+      },
+    ],
+    gradientDefs: [
+      {
+        id: "a",
+        x1: "76.079",
+        x2: "523.48",
+        y1: "10.798",
+        y2: "365.95",
+        gradientTransform: "translate(1.11 14.613) scale(.24566)",
+        gradientUnits: "userSpaceOnUse",
+        stops: [
+          { offset: "0", stopColor: "#9013fe" },
+          { offset: "1", stopColor: "#6610f2" },
+        ],
+      },
+      {
+        id: "b",
+        x1: "193.51",
+        x2: "293.51",
+        y1: "109.74",
+        y2: "278.87",
+        gradientTransform: "translate(0 52)",
+        gradientUnits: "userSpaceOnUse",
+        stops: [
+          { offset: "0", stopColor: "#fff" },
+          { offset: "1", stopColor: "#f1e5fc" },
+        ],
+      },
+      {
+        id: "c",
+        width: "197",
+        height: "249",
+        x: "161.9",
+        y: "135.46",
+        colorInterpolationFilters: "sRGB",
+        filterUnits: "userSpaceOnUse",
+        stops: [
+          { offset: "0", stopColor: "#ffffff" },
+          { offset: "1", stopColor: "#ffffff" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "powershell",
+    paths: [
+      {
+        //<linearGradient id="a" x1="96.306" x2="25.454" y1="35.144" y2="98.431" gradientTransform="matrix(1 0 0 -1 0 128)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a9c8ff"></stop><stop offset="1" stop-color="#c7e6ff"></stop></linearGradient><path fill="url(#a)" fill-rule="evenodd" d="M7.2 110.5c-1.7 0-3.1-.7-4.1-1.9-1-1.2-1.3-2.9-.9-4.6l18.6-80.5c.8-3.4 4-6 7.4-6h92.6c1.7 0 3.1.7 4.1 1.9 1 1.2 1.3 2.9.9 4.6l-18.6 80.5c-.8 3.4-4 6-7.4 6H7.2z" clip-rule="evenodd" opacity=".8"></path><linearGradient id="b" x1="25.336" x2="94.569" y1="98.33" y2="36.847" gradientTransform="matrix(1 0 0 -1 0 128)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2d4664"></stop><stop offset=".169" stop-color="#29405b"></stop><stop offset=".445" stop-color="#1e2f43"></stop><stop offset=".79" stop-color="#0c131b"></stop><stop offset="1"></stop></linearGradient><path fill="url(#b)" fill-rule="evenodd" d="M120.3 18.5H28.5c-2.9 0-5.7 2.3-6.4 5.2L3.7 104.3c-.7 2.9 1.1 5.2 4 5.2h91.8c2.9 0 5.7-2.3 6.4-5.2l18.4-80.5c.7-2.9-1.1-5.3-4-5.3z" clip-rule="evenodd"></path><path fill="#2C5591" fill-rule="evenodd" d="M64.2 88.3h22.3c2.6 0 4.7 2.2 4.7 4.9s-2.1 4.9-4.7 4.9H64.2c-2.6 0-4.7-2.2-4.7-4.9s2.1-4.9 4.7-4.9zM78.7 66.5c-.4.8-1.2 1.6-2.6 2.6L34.6 98.9c-2.3 1.6-5.5 1-7.3-1.4-1.7-2.4-1.3-5.7.9-7.3l37.4-27.1v-.6l-23.5-25c-1.9-2-1.7-5.3.4-7.4 2.2-2 5.5-2 7.4 0l28.2 30c1.7 1.9 1.8 4.5.6 6.4z" clip-rule="evenodd"></path><path fill="#FFF" fill-rule="evenodd" d="M77.6 65.5c-.4.8-1.2 1.6-2.6 2.6L33.6 97.9c-2.3 1.6-5.5 1-7.3-1.4-1.7-2.4-1.3-5.7.9-7.3l37.4-27.1v-.6l-23.5-25c-1.9-2-1.7-5.3.4-7.4 2.2-2 5.5-2 7.4 0l28.2 30c1.7 1.8 1.8 4.4.5 6.4zM63.5 87.8h22.3c2.6 0 4.7 2.1 4.7 4.6 0 2.6-2.1 4.6-4.7 4.6H63.5c-2.6 0-4.7-2.1-4.7-4.6 0-2.6 2.1-4.6 4.7-4.6z" clip-rule="evenodd"></path>
+      },
+    ],
+  },
+  {
+    id: "postman",
+    paths: [
+      {
+        fill: "#f37036",
+        d: "M113.117 26.066C92.168-1.062 53.191-6.07 26.062 14.883c-27.125 20.953-32.128 59.93-11.175 87.055 20.957 27.124 59.937 32.124 87.058 11.167 27.114-20.953 32.118-59.918 11.172-87.039Zm0 0",
+      },
+      {
+        fill: "#fff",
+        d: "M91.078 24.164a10.038 10.038 0 0 0-5.781 2.426 10.028 10.028 0 0 0-1.54 13.465 10.028 10.028 0 0 0 13.276 2.715h.002v.001l.156.155a10.63 10.63 0 0 0 1.965-1.45A10.341 10.341 0 0 0 99 27.107v-.002l-8.844 8.789-.156-.155 8.844-8.793a10.038 10.038 0 0 0-7.766-2.78zM79.434 38.551c-4.24-.007-11.163 4.799-28.067 21.703l.084.086c-.092-.032-.185-.035-.185-.035l-6.364 6.308a1.035 1.035 0 0 0 .93 1.762l10.914-2.328a.307.307 0 0 0 .092-.17l.242.25-3.72 3.69h-.18l-22.086 22.26 7.086 6.824a1.254 1.254 0 0 0 1.476.149 1.327 1.327 0 0 0 .645-1.356l-1.035-4.5a.534.534 0 0 1 0-.62 117.285 117.285 0 0 0 26.738-17.583l-4.535-4.537.086-.014-2.69-2.689.172-.174.182.186-.094.091 7.137 7.293v-.003c13.68-12.954 23.39-23.367 20.865-30.375a3.83 3.83 0 0 0-1.107-2.208v.004a3.778 3.778 0 0 0-.483-.306c-.083-.088-.156-.178-.244-.264l-.066.066a3.778 3.778 0 0 0-.582-.29l.289-.292c-1.796-1.6-3.28-2.924-5.5-2.93zM30.94 92.21l-5.171 5.172v.004a1.03 1.03 0 0 0-.457 1.125 1.035 1.035 0 0 0 .921.789l12.672.875-7.965-7.965z",
+      },
+      {
+        fill: "#f37036",
+        d: "M91.95 23.31a11.047 11.047 0 0 0-7.759 3.17 10.988 10.988 0 0 0-2.39 11.641c-4.741-2.03-11.155 1.51-31.106 21.457a.932.932 0 0 0-.037.094 1.242 1.242 0 0 0-.119.062l-6.309 6.364a1.97 1.97 0 0 0-.363 2.324 2.012 2.012 0 0 0 1.707.984l.313-.203 8.424-1.797-4.03 4.067a.873.873 0 0 0-.054.166l-19.75 19.799a.798.798 0 0 0-.192.238l-5.086 5.09a1.967 1.967 0 0 0-.414 2.043 1.995 1.995 0 0 0 1.656 1.265l12.618.88a1.01 1.01 0 0 0 .52-.415.886.886 0 0 0 0-1.035l-.026-.025a2.243 2.243 0 0 0 .705-.58 2.237 2.237 0 0 0 .406-1.876l-.984-4.187a126.725 126.725 0 0 0 26.334-16.861 1.091 1.091 0 0 0 .248.103c.254-.019.492-.128.672-.308 13.55-12.83 21.515-21.622 21.515-28.602a8.03 8.03 0 0 0-.431-2.85 10.957 10.957 0 0 0 3.845.83l-.015.004a11.219 11.219 0 0 0 5.183-1.45.775.775 0 0 0 .004.001.835.835 0 0 0 .617-.055 9.398 9.398 0 0 0 2.07-1.652 10.873 10.873 0 0 0 3.258-7.758 10.873 10.873 0 0 0-3.257-7.758.93.93 0 0 0-.118-.091 11.045 11.045 0 0 0-7.656-3.078zm-.087 1.772a9.27 9.27 0 0 1 5.586 1.914l-8.068 8.117a.84.84 0 0 0-.076.098.83.83 0 0 0-.239.55.832.832 0 0 0 .313.65h.002l6.1 6.1a9.044 9.044 0 0 1-10.028-1.913c-2.586-2.6-3.336-6.504-1.953-9.891 1.383-3.39 4.68-5.605 8.363-5.625zm7.12 3.432a8.87 8.87 0 0 1 2.033 5.674 9.15 9.15 0 0 1-2.688 6.464 9.989 9.989 0 0 1-1.098.895L92.307 36.7l-.963-.963.265-.265 7.373-6.96zm-.366 4.193a.777.777 0 0 0-.55.031.731.731 0 0 0-.36.426.73.73 0 0 0 .05.559 2.226 2.226 0 0 1-.257 2.328.64.64 0 0 0-.195.488c.004.184.07.36.195.492a.58.58 0 0 0 .414 0 .68.68 0 0 0 .672-.207 3.573 3.573 0 0 0 .465-3.777v.004a.777.777 0 0 0-.434-.344zM79.34 39.43a5.584 5.584 0 0 1 3.31 1.226 4.756 4.756 0 0 0-2.681 1.34L57.162 64.701l-4.476-4.476c11.828-11.772 19.06-17.921 23.556-19.936a5.584 5.584 0 0 1 3.098-.86zm3.965 2.96a2.895 2.895 0 0 1 2.043.844 2.786 2.786 0 0 1 .879 2.121 2.869 2.869 0 0 1-.985 2.07l-24.25 21.106-2.617-2.617 22.887-22.68a2.895 2.895 0 0 1 2.043-.843zm2.994 6.698c-1.69 6.702-10.647 15.783-19.987 24.607l-3.777-3.773L86.3 49.088zM51.367 61.547l.274.27 3.513 3.513-9.63 2.06 5.843-5.843zm5.793 5.84.004.004 1.168 1.195a1.086 1.086 0 0 0 .018.084l.078.012.248.254.82.84-5.385.66 3.05-3.05zm3.867 4.076 3.578 3.576A126.992 126.992 0 0 1 38.75 91.695a1.44 1.44 0 0 0-.777 1.653l1.035 4.5a.31.31 0 0 1 0 .363.31.31 0 0 1-.414 0l-6.102-6.152L51.3 72.975l9.728-1.512zm-29.933 21.94.869.814 4.492 4.492-10.016-.648 4.655-4.659z",
+      },
+    ],
+  },
+  {
+    id: "swagger",
+    paths: [
+      {
+        fill: "#85ea2d",
+        d: "M63.999 124.945c-33.607 0-60.95-27.34-60.95-60.949C3.05 30.388 30.392 3.048 64 3.048s60.95 27.342 60.95 60.95c0 33.607-27.343 60.946-60.95 60.946z",
+      },
+      {
+        fill: "#173647",
+        d: "M40.3 43.311c-.198 2.19.072 4.454-.073 6.668-.173 2.217-.444 4.407-.888 6.596-.615 3.126-2.56 5.489-5.24 7.458 5.218 3.396 5.807 8.662 6.152 14.003.172 2.88.098 5.785.394 8.638.221 2.215 1.082 2.782 3.372 2.854.935.025 1.894 0 2.978 0v6.842c-6.768 1.156-12.354-.762-13.734-6.496a39.329 39.329 0 0 1-.836-6.4c-.148-2.287.097-4.577-.074-6.864-.492-6.277-1.305-8.393-7.308-8.689v-7.8c.441-.1.86-.174 1.302-.223 3.298-.172 4.701-1.182 5.414-4.43a37.512 37.512 0 0 0 .616-5.536c.247-3.569.148-7.21.763-10.754.86-5.094 4.01-7.556 9.254-7.852 1.476-.074 2.978 0 4.676 0v6.99c-.714.05-1.33.147-1.969.147-4.258-.148-4.48 1.304-4.8 4.848zm8.195 16.193h-.099c-2.462-.123-4.578 1.796-4.702 4.258-.122 2.485 1.797 4.603 4.259 4.724h.295c2.436.148 4.527-1.724 4.676-4.16v-.245c.05-2.486-1.944-4.527-4.43-4.577zm15.43 0c-2.386-.074-4.38 1.796-4.454 4.159 0 .149 0 .271.024.418 0 2.684 1.821 4.406 4.578 4.406 2.707 0 4.406-1.772 4.406-4.553-.025-2.682-1.823-4.455-4.554-4.43Zm15.801 0a4.596 4.596 0 0 0-4.676 4.454 4.515 4.515 0 0 0 4.528 4.528h.05c2.264.394 4.553-1.796 4.701-4.429.122-2.437-2.092-4.553-4.604-4.553Zm21.682.369c-2.855-.123-4.284-1.083-4.996-3.79a27.444 27.444 0 0 1-.811-5.292c-.198-3.298-.174-6.62-.395-9.918-.516-7.826-6.177-10.557-14.397-9.205v6.792c1.304 0 2.313 0 3.322.025 1.748.024 3.077.69 3.249 2.634.172 1.772.172 3.568.344 5.365.346 3.57.542 7.187 1.157 10.706.542 2.904 2.536 5.07 5.02 6.841-4.355 2.929-5.636 7.113-5.857 11.814-.122 3.223-.196 6.472-.368 9.721-.148 2.953-1.181 3.913-4.16 3.987-.835.024-1.648.098-2.583.148v6.964c1.748 0 3.347.1 4.946 0 4.971-.295 7.974-2.706 8.96-7.531.417-2.658.662-5.34.737-8.023.171-2.46.148-4.946.394-7.382.369-3.815 2.116-5.389 5.93-5.636a5.161 5.161 0 0 0 1.06-.245v-7.801c-.64-.074-1.084-.148-1.552-.173zM64 6.1c31.977 0 57.9 25.92 57.9 57.898 0 31.977-25.923 57.899-57.9 57.899-31.976 0-57.898-25.922-57.898-57.9C6.102 32.023 32.024 6.101 64 6.101m0-6.1C28.71 0 0 28.71 0 64c0 35.288 28.71 63.998 64 63.998 35.289 0 64-28.71 64-64S99.289.002 64 .002Z",
+      },
+    ],
+  },
+  {
+    id: "putty",
+    paths: [
+      {
+        fill: "#0403ff",
+        d: "M69.531 19.84h31.281v20.25H69.531zm0 0",
+      },
+      {
+        fill: "#0808bd",
+        d: "M69.531 18.918v22.094h-1.895l.051-22.094zm0 0",
+      },
+      {
+        fill: "#000373",
+        d: "M69.531 19.84h31.281v-1.844H67.688v1.844zm0 0",
+      },
+      {
+        fill: "#000473",
+        d: "M66.766 17.074h34.969v23.91H78.746v-.922h22.094V17.996H67.688v22.988l-.922.922zm0 0",
+      },
+      {
+        fill: "#0403ff",
+        d: "M23.527 77.797h31.281v20.25H23.527zm0 0",
+      },
+      {
+        fill: "#0808bd",
+        d: "M23.527 76.875v22.094h-1.895l.051-22.094zm0 0",
+      },
+      {
+        fill: "#000373",
+        d: "M23.527 77.797h31.281v-1.84H21.684v1.84zm0 0",
+      },
+      {
+        fill: "#000473",
+        d: "M54.809 98.047v-22.09H21.684v22.988h-.922v-23.91H55.73v23.91h-.922",
+      },
+      {
+        fill: "#0001DF",
+        d: "M23.527 98.047h31.281v.922H23.527zm0 0",
+      },
+      {
+        fill: "#fffffd",
+        d: "M6.965 117.352v-9.191h56.113l7.375-7.371h4.605L64 111.848H10.648v5.527H6.965zm0 0",
+      },
+      {
+        fill: "#bfbfc0",
+        d: "M6.965 108.16l8.266-8.27v8.27zm0 0",
+      },
+      {
+        fill: "#bcbfb1",
+        d: "M6.965 117.352h3.684v3.684H6.965zm0 0",
+      },
+      {
+        fill: "#c2c2c2",
+        d: "M63.078 108.16l7.375-7.371h-2.766l-7.375 7.371zm0 0",
+      },
+      {
+        fill: "#7e7e7e",
+        d: "M75.035 100.813v12.879l-7.375 7.371H10.648v-3.687H64v-5.527zm0 0",
+      },
+      {
+        fill: "silver",
+        d: "M41.934 114.609v2.766H10.648v-5.527H64v5.527h-3.687v-2.766zm0 0",
+      },
+      {
+        fill: "#010101",
+        d: "M41.934 114.609H60.34v2.766H41.934zm0 0",
+      },
+      {
+        fill: "#fffffd",
+        d: "M52.965 59.391v-9.187h56.117l7.371-7.375h4.609l-11.035 11.035H56.652v5.527zm0 0",
+      },
+      {
+        fill: "#bfbfc0",
+        d: "M52.965 50.203l8.27-8.27v8.27zm0 0",
+      },
+      {
+        fill: "#bcbfb1",
+        d: "M52.965 59.391h3.688v3.688h-3.687zm0 0",
+      },
+      {
+        fill: "#c2c2c2",
+        d: "M109.082 50.203l7.371-7.375h-2.762l-7.375 7.375zm0 0",
+      },
+      {
+        fill: "#7e7e7e",
+        d: "M121.035 42.828v12.879l-7.371 7.371H56.652v-3.687h53.352v-5.527zm0 0",
+      },
+      {
+        fill: "silver",
+        d: "M87.91 56.652v2.738H56.652v-5.527h53.352v5.527h-3.687v-2.762H87.91zm0 0",
+      },
+      {
+        fill: "#010101",
+        d: "M87.91 56.652h18.406v2.738H87.91zm0 0",
+      },
+      {
+        fill: "gray",
+        d: "M66.766 46.516h36.813V15.23l9.191-8.266v34.969l-6.453 6.449H64.922",
+      },
+      {
+        fill: "#bfc1bb",
+        d: "M63.078 13.391l40.473 1.84-1.844 1.844 4.609-3.684 6.453-6.453H69.531zm0 0",
+      },
+      {
+        fill: "#c6bcbf",
+        d: "M66.766 42.828h36.813v3.688H66.766zm0 0",
+      },
+      {
+        fill: "#817f87",
+        d: "M64.922 41.934h.922l.922-.922V17.074h34.969l1.844-1.844H64.922zm0 0"
+      },
+      {
+        fill: "#fefffa",
+        d: "M65.844 41.934l.922-.922h34.969V17.074l1.844-1.844v27.598H65.844zm0 0",
+      },
+      {
+        fill: "#fff",
+        d: "M63.078 13.391h41.395l-.922 1.84H64.922v28.52l-1.844.922zm0 0",
+      },
+      {
+        fill: "#bebebe",
+        d: "M64.922 41.934h.922v.922l-.922.922zm0 0",
+      },
+      {
+        fill: "gray",
+        d: "M18.918 104.473h38.629V73.191l9.191-8.27V99.89l-6.449 6.453H17.074",
+      },
+      {
+        fill: "#bfc1bb",
+        d: "M17.074 71.371l40.473 1.844-1.84 1.844 4.605-3.687 6.453-6.449H23.527zm0 0",
+      },
+      {
+        fill: "#c6bcbf",
+        d: "M57.547 100.813v3.688H18.918v-4.609h.922v.922zm0 0",
+      },
+      {
+        fill: "#817f87",
+        d: "M18.918 99.891h.922l.922-.922v-23.91H55.73l1.844-1.844H18.918zm0 0",
+      },
+      {
+        fill: "#fefffa",
+        d: "M19.84 99.891l.922-.922H55.73v-23.91l1.844-1.844v27.598H19.84zm0 0",
+      },
+      {
+        fill: "#fff",
+        d: "M17.074 71.371h41.395l-.922 1.844H18.918V104.5l-1.844 1.844zm0 0",
+      },
+      {
+        fill: "#bebebe",
+        d: "M18.918 99.891h.922v.922h-.922zm0 0",
+      },
+      {
+        d: "M5.121 108.16l9.188-9.191h.922v1.844h-.922l-7.371 7.375v12.875H67.66l7.375-7.371v-12.879h-8.27l1.844-1.844h8.266v14.723l-9.187 9.188H5.121zm0 0",
+      },
+      {
+        fill: "",
+        d: "M17.074 71.371v34.973l-1.844 1.844V71.371l8.27-8.266h45.109v36.813l-8.27 8.27H15.23l1.844-1.844h43.238l6.453-6.453V64.922H23.527zm0 0",
+      },
+      {
+        fill: "",
+        d: "M51.125 50.203l9.188-9.191h.922v1.844h-.922l-7.371 7.371v12.879h60.723l7.371-7.375V42.855h-8.266l1.84-1.844h8.27V55.73l-9.187 9.191H51.125zm0 0",
+      },
+      {
+        fill: "",
+        d: "M63.078 13.391V48.36l-1.844 1.844V13.391l8.297-8.27h45.078v36.813l-8.266 8.27H61.234l1.844-1.844h43.238l6.453-6.453V6.965H69.531zm0 0",
+      },
+      {
+        fill: "#FFFF01",
+        d: "M46.516 60.313h15.641L37.324 85.145v1.844h2.766l40.473-32.203v-1.844H65.844l23.91-24.832v-1.844H87.91L46.516 58.469zm0 0",
+      },
+      {
+        fill: "",
+        d: "M40.398 87.91h-3.996v-3.148l23.555-23.551H45.621v-3.203l41.98-32.637h3.074v3.121L67.992 52.043h13.469v3.203zm-2.152-1.816h1.512l39.883-31.719v-.488H63.668L88.832 27.75v-.562h-.613L47.438 58.93v.461h16.945l-26.137 26.14zm0 0",
+      },
+    ],
+  },
+  {
+    id: "json",
+    paths: [
+      {
+        //<linearGradient id="a" x1="-670.564" x2="-583.105" y1="-280.831" y2="-368.306" gradientTransform="matrix(.9988 0 0 -.9987 689.011 -259.008)" gradientUnits="userSpaceOnUse"><stop offset="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><path fill="url(#a)" fill-rule="evenodd" d="M63.895 94.303c27.433 37.398 54.281-10.438 54.241-39.205-.046-34.012-34.518-53.021-54.263-53.021C32.182 2.077 2 28.269 2 64.105 2 103.937 36.596 126 63.873 126c-6.172-.889-26.742-5.296-27.019-52.674-.186-32.044 10.453-44.846 26.974-39.214.37.137 18.223 7.18 18.223 30.187 0 22.908-18.156 30.004-18.156 30.004z" clip-rule="evenodd"></path><linearGradient id="b" x1="-579.148" x2="-666.607" y1="-364.34" y2="-276.873" gradientTransform="matrix(.9988 0 0 -.9987 689.011 -259.008)" gradientUnits="userSpaceOnUse"><stop offset="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><path fill="url(#b)" fill-rule="evenodd" d="M63.863 34.086C45.736 27.838 23.53 42.778 23.53 72.703 23.53 121.565 59.739 126 64.128 126 95.818 126 126 99.808 126 63.972 126 24.14 91.404 2.077 64.127 2.077c7.555-1.046 40.719 8.176 40.719 53.504 0 29.559-24.764 45.651-40.87 38.776-.37-.137-18.223-7.18-18.223-30.187 0-22.91 18.11-30.085 18.11-30.084z" clip-rule="evenodd"></path>
+      },
+    ],
+  },
+];*/
+
+export const svgList = [
+  {
+    id: "html",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    id: "css",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    id: "tailwind",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    id: "bootstrap",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  },
+  {
+    id: "javascript",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    id: "typescript",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    id: "react",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    id: "next",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    id: "dotnet",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+  },
+  {
+    id: "json",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg",
+  },
+  {
+    id: "c",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  },
+  {
+    id: "csharp",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  },
+  {
+    id: "java",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    id: "python",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    id: "bash",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+  },
+  {
+    id: "mysql",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+  },
+  {
+    id: "docker",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    id: "aws",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+  },
+  {
+    id: "azure",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
+  },
+  {
+    id: "git",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    id: "postman",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  },
+  {
+    id: "figma",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  },
+  {
+    id: "angular",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+  },
+  {
+    id: "node",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg",
+  },
+  {
+    id: "powershell",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg",
+  },
+  {
+    id: "asm",
+    src: "data:image/png;base64,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",
+  },
+  {
+    id: "matlab",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
+  },
+  {
+    id: "firebase",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg",
+  },
+  {
+    id: "swagger",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
+  },
+  {
+    id: "elixir",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg",
+  },
+  {
+    id: "r",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg",
+  },
+];
+
+export const firstListImages = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg",
+];
+
+export const secondListImages = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+];
+
+export const thirdListImages = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vim/vim-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elixir/elixir-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg",
 ];

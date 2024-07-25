@@ -147,4 +147,4 @@ export const swotTabs = [
   },
 ];
 
-export const version = "v3.6";
+export const version = "v4.0";

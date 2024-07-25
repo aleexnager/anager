@@ -18,6 +18,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "app/resume/components/TabsContent.jsx", "app/posts/[slug]/page.jsx"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "app/resume/components/TabsContent.jsx", "app/posts/[slug]/page.jsx", "app/projects/components/Carousel.jsx"],
   "exclude": ["node_modules"]
 }

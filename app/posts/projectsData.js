@@ -16,8 +16,8 @@ export const projectsData = [
     image: "/images/projects/dataCompressor.png",
     tag: ["All", "Architecture", "Other"],
     gitUrl: "https://github.com/aleexnager/Proyecto-Ensamblador-M88110",
-    previewUrl: "/",
-    svgs: ["emacs"],
+    previewUrl: "https://github.com/aleexnager/Proyecto-Ensamblador-M88110",
+    svgs: ["asm"],
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const projectsData = [
     image: "/images/projects/languageCompiler.jpg",
     tag: ["All", "Algorithms & Data Structures", "Other"],
     gitUrl: "https://github.com/aleexnager/PdL",
-    previewUrl: "/",
+    previewUrl: "https://github.com/aleexnager/PdL",
     svgs: ["c"],
   },
   {
@@ -36,7 +36,7 @@ export const projectsData = [
     image: "/images/projects/aStarAlgorythm.png",
     tag: ["All", "IA & Machine Learning", "Other"],
     gitUrl: "https://github.com/aleexnager/IA",
-    previewUrl: "/",
+    previewUrl: "https://github.com/aleexnager/IA",
     svgs: ["python"],
   },
   {
@@ -57,7 +57,7 @@ export const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/aleexnager/anager",
     previewUrl: "/",
-    svgs: ["javascript", "nextjs", "tailwind",],
+    svgs: ["javascript", "next", "tailwind",],
   },
   {
     id: 7,
@@ -66,18 +66,17 @@ export const projectsData = [
     image: "/images/projects/E-S-controller.jpg",
     tag: ["All", "Architecture"],
     gitUrl: "https://github.com/aleexnager/E-S-mediante-interrupciones",
-    previewUrl: "/",
-    svgs: ["emacs"],
+    previewUrl: "https://github.com/aleexnager/E-S-mediante-interrupciones",
+    svgs: ["asm"],
   },
-  /*{
+  {
     id: 8,
-    title: "Project 8",
-    description: "This is project 8",
-    image: "/images/projects/project6.jpg",
-    tag: ["All", "Other"],
-    gitUrl: "/",
-    previewUrl: "/",
-    svgs: [
-    ],
-  },*/
+    title: "Threads racecourse",
+    description: "Small game with threads and semaphores.",
+    image: "/images/projects/racecourse.png",
+    tag: ["All", "Algorithms & Data Structures", "Games"],
+    gitUrl: "https://github.com/aleexnager/Hipodromo",
+    previewUrl: "https://github.com/aleexnager/Hipodromo",
+    svgs: ["c"],
+  },
 ];

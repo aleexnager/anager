@@ -2,14 +2,11 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import ProjectTag from "../../components/ProjectTag";
-import InfHorizontalScroll from "./InfHorizontalScroll";
 import { motion, useInView } from "framer-motion";
 import { projectsData } from "../../posts/projectsData";
 import { categories } from "../../lib/constants";
 
-
 const ProjectsCarousel = () => {
-
   const [tags, setTags] = useState(["All"]);
   const [searchQuery, setSearchQuery] = useState("");
   const ref = useRef(null);
@@ -35,7 +32,9 @@ const ProjectsCarousel = () => {
 
   const filteredProjects = projectsData.filter((project) => {
     const matchesTags = project.tag.some((tag) => tags.includes(tag));
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = project.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
     return matchesTags && matchesSearch;
   });
 
@@ -140,9 +139,7 @@ const ProjectsCarousel = () => {
         ))}
       </ul>
 
-      <div className="py-16 my-16">
-        <InfHorizontalScroll />
-      </div>
+      <div className="py-16 my-16"></div>
     </section>
   );
 };
