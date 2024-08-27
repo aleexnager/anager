@@ -133,7 +133,7 @@ const Cv = () => {
         <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-3">
           Education
         </h1>
-        <p className="mb-3 lg:text-lg">
+        <li className="mb-3 lg:text-lg">
           <b>Universidad Politecnica de Madrid</b>
           <br />
           <em>Student, Computer Science Engineering</em>
@@ -141,16 +141,16 @@ const Cv = () => {
           &nbsp;&nbsp;&nbsp;&nbsp;Currently studying at Madrid and focused on
           finishing my Bachelor's degree and I will pursue a master's degree in
           Cybersecurity.
-        </p>
-        <p className="mb-3 lg:text-lg">
+        </li>
+        <li className="mb-3 lg:text-lg">
           <b>Cambridge Assessment English</b>
           <br />
           <em>Advanced C1</em>
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Advanced english language official certificate
           from Cambridge School.
-        </p>
-        <p className="mb-9 lg:text-lg lg:mb-12">
+        </li>
+        <li className="mb-9 lg:text-lg lg:mb-12">
           <b>International Baccalaureate (IB)</b>
           <br />
           <em>IB diploma</em>
@@ -158,20 +158,25 @@ const Cv = () => {
           &nbsp;&nbsp;&nbsp;&nbsp;International Baccalaureate diploma obtained
           in Mirabal International School (Madrid, Spain) where I studied until
           my graduation.
-        </p>
+        </li>
 
         <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-4 lg:mb-6">
           Professional Experience
         </h1>
-        <p className="mb-3 lg:text-lg">
-          &nbsp;&nbsp;&nbsp;&nbsp;I have experience as a Full Stack Software
-          Engineer working with .NET. Here I learnd about databases, web
-          management and teamworking. I would love to start working as a
-          cybersecurity engineer as soon as I finish my bachelor studies.
-        </p>
-        <p className="mb-9 lg:text-lg lg:mb-12">
-          &nbsp;&nbsp;&nbsp;&nbsp;Apart from that I&apos;ve done many projects
-          in order to obtain personal experience and learn about modern
+        <li className="mb-3 lg:text-lg">
+          <b>Full Stack Software Engineer:</b>
+          &nbsp;&nbsp;My main role was to work in a team, developing software
+          for other businesses. The software was develop using various tools and
+          technologies, but I mainly worked with .NET Core and Entity Framework.
+          Thanks to the variety of projects I worked in, I was able to learn
+          deeply about databases, web management and teamworking.
+        </li>
+        <li className="mb-9 lg:text-lg lg:mb-12">
+          <b>Next step:</b>
+          &nbsp;&nbsp;I&apos;m currently working, but as soon as I finish my
+          studies I would like to start my profesional career in the
+          cybersecurity world. Apart from this, I&apos;ve done many projects in
+          order to obtain personal experience and learn about modern
           technologies. You can check them out{" "}
           <Link
             href={"../projects"}
@@ -180,7 +185,7 @@ const Cv = () => {
             here
           </Link>
           .
-        </p>
+        </li>
       </div>
     </section>
   );

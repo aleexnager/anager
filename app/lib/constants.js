@@ -6,12 +6,13 @@ export const tabData = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>NEXT.js</li>
+        <li>NEXT.js & .NET Core</li>
         <li>JavaScript</li>
         <li>SQL</li>
         <li>C</li>
+        <li>C#</li>
         <li>Java</li>
-        <li>Git</li>
+        <li>Git & Azure DevOps</li>
       </ul>
     ),
   },
@@ -120,7 +121,7 @@ export const swotTabs = [
     head: "Weaknesses",
     color: "bg-yellow-300",
     content: [
-      "Without experience in a professional environment",
+      "Without much experience in a professional environment",
       "Lacking important contacts",
       "I am still finishing my studies",
     ],
