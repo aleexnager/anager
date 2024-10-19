@@ -8,6 +8,8 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/web-portfolio",
     previewUrl: "https://alex-nager-portfolio.onrender.com",
     svgs: ["html", "css", "javascript",],
+    modalText: "This is my old web portfolio, my first simple personal website that I built using HTML, CSS, and JavaScript. It was my first web project and I learned a lot from it.",
+    modalButtonText: "View website",
   },
   {
     id: 2,
@@ -18,6 +20,8 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/Proyecto-Ensamblador-M88110",
     previewUrl: "https://github.com/aleexnager/Proyecto-Ensamblador-M88110",
     svgs: ["asm"],
+    modalText: "Fully functional data compressor built in Motorola assembly language. It was a project for the Computer Structure class at UPM.",
+    modalButtonText: "Go to repository",
   },
   {
     id: 3,
@@ -28,6 +32,8 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/PdL",
     previewUrl: "https://github.com/aleexnager/PdL",
     svgs: ["c"],
+    modalText: "Complemete language compiler built in C. During this project I learned how instructions are interpreted by computers. It was a project for the Languages Processors class at UPM.",
+    modalButtonText: "Go to repository",
   },
   {
     id: 4,
@@ -38,6 +44,8 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/IA",
     previewUrl: "https://github.com/aleexnager/IA",
     svgs: ["python"],
+    modalText: "A* search algorithm implementation in Python. Using Lyon metro system as a case study, the algorithm finds the shortest path between two stations.",
+    modalButtonText: "Go to repository",
   },
   {
     id: 5,
@@ -48,6 +56,8 @@ export const projectsData = [
     gitUrl: "/",
     previewUrl: "/",
     svgs: ["c"],
+    modalText: "Minishell is a project that I did for the Operating Systems class at UPM. It is a fully functional UNIX Bash shell built in C. UNFORTUNATELY, I cannot share the code because this project because DATSI UPM does not allow it.",
+    modalButtonText: "",
   },
   {
     id: 6,
@@ -58,6 +68,8 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/anager",
     previewUrl: "/",
     svgs: ["javascript", "next", "tailwind",],
+    modalText: "This is my current web portfolio, the website you are currently on. I built it using Next.js, Tailwind CSS, . I am very proud of this project because I learned a lot from it.",
+    modalButtonText: "Go Home",
   },
   {
     id: 7,
@@ -68,6 +80,8 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/E-S-mediante-interrupciones",
     previewUrl: "https://github.com/aleexnager/E-S-mediante-interrupciones",
     svgs: ["asm"],
+    modalText: "Assembly language project for the Computer Arquiteture class at UPM. It is a project that simulates an input/output controller using interruptions.",
+    modalButtonText: "Go to repository",
   },
   {
     id: 8,
@@ -78,5 +92,7 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/Hipodromo",
     previewUrl: "https://github.com/aleexnager/Hipodromo",
     svgs: ["c"],
+    modalText: "Super simple game that simulates a racecourse using threads and semaphores.",
+    modalButtonText: "Go to repository",
   },
 ];

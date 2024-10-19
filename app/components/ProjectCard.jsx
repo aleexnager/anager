@@ -1,8 +1,9 @@
-import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
 import Link from "next/link";
-import { svgList } from "../lib/svgs";
 import Image from "next/image";
+import Modal from "./Modal";
+import { svgList } from "../lib/svgs";
+import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 
 const svgsList = [
   {
@@ -66,7 +67,14 @@ const ProjectCard = ({
   gitUrl,
   previewUrl,
   svgs,
+  modalText,
+  modalButtonText,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div>
       <div
@@ -90,12 +98,12 @@ const ProjectCard = ({
           >
             <CodeBracketIcon className="h-10 w-10 text-[#ABD7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
           </Link>
-          <Link
-            href={previewUrl}
+          <button
+            onClick={openModal}
             className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
           >
             <EyeIcon className="h-10 w-10 text-[#ABD7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
-          </Link>
+          </button>
         </div>
       </div>
       <div className="rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
@@ -106,6 +114,15 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={title}
+        modalText={modalText}
+        modalButtonText={modalButtonText}
+        previewUrl={previewUrl}
+      />
     </div>
   );
 };

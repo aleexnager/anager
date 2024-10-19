@@ -15,9 +15,9 @@ const ProjectsSection = () => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  ).slice(0, 6); // mostrmos sólo los 6 primeros
+  const filteredProjects = projectsData
+    .filter((project) => project.tag.includes(tag))
+    .slice(0, 6); // mostrmos sólo los 6 primeros
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -51,6 +51,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Other"}
         />
       </div>
+
       <ul
         ref={ref}
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
@@ -70,10 +71,14 @@ const ProjectsSection = () => {
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
               svgs={project.svgs}
+              modalTitle={project.title}
+              modalText={project.modalText}
+              modalButtonText={project.modalButtonText}
             />
           </motion.li>
         ))}
       </ul>
+
       <Link href={"/projects"}>
         <div className="relative group">
           <button className="relative z-10 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-full w-9/12 lg:w-3/12 py-2 px-4 mt-8 mb-16 mx-auto">

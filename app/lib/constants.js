@@ -6,12 +6,13 @@ export const tabData = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>NEXT.js & .NET Core</li>
+        <li>Next.js & Node.js</li>
+        <li>.NET Core</li>
         <li>JavaScript</li>
-        <li>SQL</li>
-        <li>C</li>
-        <li>C#</li>
+        <li>Python</li>
+        <li>C/C#</li>
         <li>Java</li>
+        <li>SQL</li>
         <li>Git & Azure DevOps</li>
       </ul>
     ),
@@ -152,4 +153,4 @@ export const swotTabs = [
   },
 ];
 
-export const version = "v4.0";
+export const version = "v2.0.1";

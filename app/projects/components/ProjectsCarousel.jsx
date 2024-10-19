@@ -134,6 +134,9 @@ const ProjectsCarousel = () => {
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
               svgs={project.svgs}
+              modalTitle={project.title}
+              modalText={project.modalText}
+              modalButtonText={project.modalButtonText}
             />
           </motion.li>
         ))}

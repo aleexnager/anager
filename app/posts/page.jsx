@@ -12,9 +12,7 @@ const Post = async () => {
     <section className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
-        <ul
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
-        >
+        <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {posts?.map((post) => (
             <Link
               href={`posts/${post.slug}`}
