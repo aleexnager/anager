@@ -1,48 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Modal from "./Modal";
 import { svgList } from "../lib/svgs";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
-
-const svgsList = [
-  {
-    id: "html",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    id: "css",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
-  {
-    id: "tailwind",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-  },
-  {
-    id: "bootstrap",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-  },
-  {
-    id: "javascript",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    id: "typescript",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    id: "react",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    id: "next",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-  {
-    id: "dotnet",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
-  },
-];
 
 const handleSvg = (svgs) => {
   return svgs.map((svg, index) => {

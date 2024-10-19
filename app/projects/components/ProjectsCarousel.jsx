@@ -4,7 +4,7 @@ import ProjectCard from "../../components/ProjectCard";
 import ProjectTag from "../../components/ProjectTag";
 import Carousel from "./Carousel";
 import { motion, useInView } from "framer-motion";
-import { projectsData } from "../../posts/projectsData";
+import { projectsData } from "../../lib/projectsData";
 import { categories } from "../../lib/constants";
 
 const ProjectsCarousel = () => {

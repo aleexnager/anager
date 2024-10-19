@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
-import { projectsData } from "../posts/projectsData";
+import { projectsData } from "../lib/projectsData";
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
