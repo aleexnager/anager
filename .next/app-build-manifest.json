@@ -1,47 +1,15 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-f5d767265a0c1bf8.js",
-      "static/chunks/fd9d1056-36eb487bea0e3d91.js",
-      "static/chunks/117-02cde7f60f8662f8.js",
-      "static/chunks/main-app-f400729bef19f579.js",
-      "static/chunks/app/_not-found/page-1e6d8f5bdd0e1431.js"
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
-      "static/chunks/webpack-f5d767265a0c1bf8.js",
-      "static/chunks/fd9d1056-36eb487bea0e3d91.js",
-      "static/chunks/117-02cde7f60f8662f8.js",
-      "static/chunks/main-app-f400729bef19f579.js",
-      "static/css/4f37f43f58aaebb4.css",
-      "static/chunks/app/layout-19b27e9cbdac646f.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-f5d767265a0c1bf8.js",
-      "static/chunks/fd9d1056-36eb487bea0e3d91.js",
-      "static/chunks/117-02cde7f60f8662f8.js",
-      "static/chunks/main-app-f400729bef19f579.js",
-      "static/chunks/134-58e1c2f3652bbf83.js",
-      "static/chunks/451-c67f6fc2b4ddfbfb.js",
-      "static/chunks/146-a97e6db3daefca21.js",
-      "static/chunks/app/page-02437e6592c9b172.js"
-    ],
-    "/projects/page": [
-      "static/chunks/webpack-f5d767265a0c1bf8.js",
-      "static/chunks/fd9d1056-36eb487bea0e3d91.js",
-      "static/chunks/117-02cde7f60f8662f8.js",
-      "static/chunks/main-app-f400729bef19f579.js",
-      "static/chunks/134-58e1c2f3652bbf83.js",
-      "static/chunks/451-c67f6fc2b4ddfbfb.js",
-      "static/chunks/146-a97e6db3daefca21.js",
-      "static/chunks/app/projects/page-155be506d7eb427b.js"
-    ],
-    "/resume/page": [
-      "static/chunks/webpack-f5d767265a0c1bf8.js",
-      "static/chunks/fd9d1056-36eb487bea0e3d91.js",
-      "static/chunks/117-02cde7f60f8662f8.js",
-      "static/chunks/main-app-f400729bef19f579.js",
-      "static/chunks/134-58e1c2f3652bbf83.js",
-      "static/chunks/app/resume/page-13b105731ed5be78.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ]
   }
 }
