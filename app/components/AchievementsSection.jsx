@@ -18,7 +18,7 @@ const achievementsList = [
   {
     prefix: "~",
     metric: "Degree",
-    value: 75,
+    value: 90,
     postfix: "%",
   },
   {
@@ -27,7 +27,7 @@ const achievementsList = [
   },
   {
     metric: "Years",
-    value: 5,
+    value: 2,
     postfix: "+",
   },
 ];

@@ -18,7 +18,7 @@ function Carousel() {
           </span>
           do I know?
         </h3>
-        <p className="pb-6">Well.. This are some of them</p>
+        <p className="pb-6 text-white">Well... this are some of them</p>
         <div className="p-3 flex w-full overflow-hidden select-none [mask-image:_linear-gradient(to_right,transparent_0,_black_100px,_black_calc(100%-100px),transparent_100%)]">
           <ul className="flex-shrink-0 flex justify-around items-center whitespace-nowrap w-full animate-scroll_left">
             {firstListImages.map((item) => (

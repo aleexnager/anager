@@ -21,7 +21,7 @@ const Cv = () => {
   };
 
   return (
-    <section id="about" className="lg:mx-10">
+    <section id="about" className="lg:mx-10 text-white">
       <div className="lg:mx-10">
         <h3 className="flex justify-center font-bold text-xl lg:text-2xl">
           Let&apos;s build something together

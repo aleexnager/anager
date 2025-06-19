@@ -7,7 +7,7 @@ const SwotAnalisis = () => {
   const [selectedTab, setSelectedTab] = useState("S");
 
   return (
-    <section id="about" className="lg:mx-10">
+    <section id="about" className="lg:mx-10 text-white">
       <br />
       <br />
       <h1 className="text-4xl font-bold flex justify-center pt-12 lg:pb-4">

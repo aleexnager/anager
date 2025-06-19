@@ -125,6 +125,10 @@ export const svgList = [
     id: "r",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg",
   },
+  {
+    id: "mongodb",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
+  },
 ];
 
 export const firstListImages = [
