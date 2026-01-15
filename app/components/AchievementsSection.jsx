@@ -16,9 +16,9 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    prefix: "~",
+    prefix: "",
     metric: "Degree",
-    value: 90,
+    value: 100,
     postfix: "%",
   },
   {
