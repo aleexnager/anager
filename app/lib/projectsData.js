@@ -8,7 +8,7 @@ export const projectsData = [
     gitUrl: "https://github.com/aleexnager/web-portfolio",
     previewUrl: "https://alex-nager-portfolio.onrender.com",
     svgs: ["html", "css", "javascript",],
-    modalText: "This is my old web portfolio, my first simple personal website that I built using HTML, CSS, and JavaScript. It was my first web project and I learned a lot from it.",
+    modalText: "This is my old web portfolio, my first simple personal website that I built using HTML, CSS, and JavaScript. It was my first web project and I learned a lot from it. Just be aware that some of its functionalities are not currently working as it is no longer being maintained.",
     modalButtonText: "View website",
   },
   {
@@ -56,7 +56,7 @@ export const projectsData = [
     gitUrl: "/",
     previewUrl: "/",
     svgs: ["c"],
-    modalText: "Minishell is a project that I did for the Operating Systems class at UPM. It is a fully functional UNIX Bash shell built in C. UNFORTUNATELY, I cannot share the code because this project because DATSI UPM does not allow it.",
+    modalText: "Minishell is a project that I did for the Operating Systems class at UPM. It is a fully functional UNIX Bash shell built in C. Unfortunately, I cannot share the code because this project because DATSI UPM does not allow it. However, you can contact me for more information and i'll be happy to show anything you may be interested in.",
     modalButtonText: "",
   },
   {
@@ -113,10 +113,10 @@ export const projectsData = [
     description: "Bachelor's Final Project",
     image: "/images/projects/tfg.jpeg",
     tag: ["All", "Cybersecurity", "Algorithms & Data Structures", "Documentation"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/aleexnager/stego-project",
+    previewUrl: "https://github.com/aleexnager/stego-project",
     svgs: ["python"],
     modalText: "\'Análisis y optimización de algoritmos de esteganografía en imágenes basado en teoría de la información\' is the title of my Bachelor's Final Project. In this project I analyzed the LSB algorithm and optimized it using the entropy of the image, creating 2 new optimized algorithms. Unfortunately, I cannot publicly share the code or the report because the ownership of the project is shared with the UPM. However, you can contact me for more information and i'll be happy to show anything you may be interested in.",
-    modalButtonText: "",
+    modalButtonText: "Go to repository",
   },
 ];

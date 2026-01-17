@@ -6,6 +6,8 @@ export const tabData = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>ENS</li>
+        <li>ISO 27001</li>
         <li>Next.js & Node.js</li>
         <li>.NET Core</li>
         <li>JavaScript</li>
@@ -14,6 +16,7 @@ export const tabData = [
         <li>Java</li>
         <li>SQL</li>
         <li>Git & Azure DevOps</li>
+        <li>Microsoft Office</li>
       </ul>
     ),
   },
@@ -29,7 +32,7 @@ export const tabData = [
     ),
   },
   {
-    title: "Experience/Certifications",
+    title: "Experience",
     id: "experience",
     content: (
       <ul className="list-disc pl-2">
@@ -39,7 +42,60 @@ export const tabData = [
           }
         >
           <li className="cursor-pointer hover:text-primary-500">
-            Full Stack Software Engineer .NET
+            Cybersecurity Risk Analyst <i>(PwC)</i>
+          </li>
+        </Link>
+        <Link
+          href={
+            "https://www.linkedin.com/in/anager/"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Full Stack Software Engineer .NET <i>(NalCOM)</i>
+          </li>
+        </Link>
+      </ul>
+    ),
+  },
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="list-disc pl-2">
+        <Link
+          href={
+            "https://www.linkedin.com/in/anager/"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Esquema Nacional de Seguridad - ENS <i>(CCN-CERT Centro Criptológico Nacional)</i>
+          </li>
+        </Link>
+        <Link
+          href={
+            "https://www.linkedin.com/in/anager/"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Audit in the ENS <i>(CCN-CERT Centro Criptológico Nacional)</i>
+          </li>
+        </Link>
+        <Link
+          href={
+            "https://www.linkedin.com/in/anager/"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Analysis and Risk Management of Information Systems <i>(CCN-CERT Centro Criptológico Nacional)</i>
+          </li>
+        </Link>
+        <Link
+          href={
+            "https://www.coursera.org/account/accomplishments/specialization/LGIRIHK7HU0B"
+          }
+        >
+          <li className="cursor-pointer hover:text-primary-500">
+            Data Analysis and Presentation Skills: the PwC Approach <i>(PwC)</i>
           </li>
         </Link>
         <Link
@@ -48,7 +104,7 @@ export const tabData = [
           }
         >
           <li className="cursor-pointer hover:text-primary-500">
-            Introduction to Generative AI
+            Introduction to Generative AI <i>(Google)</i>
           </li>
         </Link>
         <Link
@@ -57,7 +113,7 @@ export const tabData = [
           }
         >
           <li className="cursor-pointer hover:text-primary-500">
-            Introduction to Responsible AI
+            Introduction to Responsible AI <i>(Google)</i>
           </li>
         </Link>
       </ul>
@@ -153,4 +209,4 @@ export const swotTabs = [
   },
 ];
 
-export const version = "v2.0.3";
+export const version = "v2.1.0";

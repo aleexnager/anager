@@ -100,7 +100,7 @@ const Cv = () => {
           About Me
         </h1>
         <p className="mb-9 lg:text-lg lg:mb-12">
-          &nbsp;&nbsp;&nbsp;&nbsp;Based in Madrid, Spain. 22 year old highly
+          &nbsp;&nbsp;&nbsp;&nbsp;Based in Madrid, Spain. 23 year old highly
           motivated computer science engineer that enjoys developing open source
           code and web projects. I have the ambition of becoming an industry
           expert as the head of my team.
@@ -136,7 +136,7 @@ const Cv = () => {
         <li className="mb-3 lg:text-lg">
           <b>Universidad Politecnica de Madrid</b>
           <br />
-          <em>Student, Computer Science Engineering</em>
+          <em>Graduated, Computer Science Engineering</em>
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Currently studying at Madrid and focused on
           finishing my Bachelor's degree and I will pursue a master's degree in
@@ -164,27 +164,17 @@ const Cv = () => {
           Professional Experience
         </h1>
         <li className="mb-3 lg:text-lg">
-          <b>Full Stack Software Engineer:</b>
+          <b>Cybersecurity Risk Analyst <i>(2025-Present)</i>:</b>
+          &nbsp;&nbsp;Currently working as a Cybersecurity Risk Analyst at PwC
+          Spain. My main role is to help clients identify and manage any possible vulnerability their systems have. This involves performing security assessments, analyzing risks, and proposing mitigation strategies to ensure the safety of their digital assets.
+        </li>
+        <li className="mb-9 lg:text-lg lg:mb-12">
+          <b>Full Stack Software Engineer <i>(2024-2025)</i>:</b>
           &nbsp;&nbsp;My main role was to work in a team, developing software
           for other businesses. The software was develop using various tools and
           technologies, but I mainly worked with .NET Core and Entity Framework.
           Thanks to the variety of projects I worked in, I was able to learn
           deeply about databases, web management and teamworking.
-        </li>
-        <li className="mb-9 lg:text-lg lg:mb-12">
-          <b>Next step:</b>
-          &nbsp;&nbsp;I&apos;m currently working, but as soon as I finish my
-          studies I would like to start my profesional career in the
-          cybersecurity world. Apart from this, I&apos;ve done many projects in
-          order to obtain personal experience and learn about modern
-          technologies. You can check them out{" "}
-          <Link
-            href={"../projects"}
-            className="underline font-semibold hover:text-primary-500"
-          >
-            here
-          </Link>
-          .
         </li>
       </div>
     </section>

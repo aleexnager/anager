@@ -1,4 +1,4 @@
-// File: /home/anager/web/anager/app/page.js
+// File: /home/anager/web_portfolio/anager/app/page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

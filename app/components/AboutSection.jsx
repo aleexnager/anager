@@ -35,12 +35,11 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-base md:text-lg">
-            As an engineering student I have acquired a set of technical and
+            As an engineering I have acquired a set of technical and
             analytical skills that enable me to efficiently solve complex
-            problems. And as a computer science student I feel comfortable
-            working with programming languages and software development
-            technologies, which allows me to quickly adapt to different
-            environments and projects.
+            problems. I feel comfortable working with programming languages 
+            and software development technologies, which allows me to quickly 
+            adapt to different environments and projects.
           </p>
 
           <div className="flex flex-row justify-start mt-10">
@@ -63,7 +62,14 @@ const AboutSection = () => {
               active={tab === "experience"}
             >
               {" "}
-              Experience/Certifications{" "}
+              Experience{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("certifications")}
+              active={tab === "certifications"}
+            >
+              {" "}
+              Certifications{" "}
             </TabButton>
           </div>
           <div className="mt-6">

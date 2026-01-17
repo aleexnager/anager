@@ -1,5 +1,12 @@
-import { MDXProvider } from "@mdx-js/react";
 import nextMDX from "@next/mdx";
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  experimental: {
+    mdxRs: true,
+  },
+};
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
@@ -8,14 +15,5 @@ const withMDX = nextMDX({
     rehypePlugins: [],
   },
 });
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  pageExtensions: ["jsx", "js", "ts", "tsx", "md", "mdx"],
-  experimental: {
-    appDir: true,
-    mdxRs: true,
-  },
-};
 
 export default withMDX(nextConfig);
