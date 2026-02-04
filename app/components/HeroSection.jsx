@@ -15,13 +15,12 @@ const HeroSection = () => {
   };
 
   const downloadCV = () => {
-    const pdfURL = "/docs/Alejandro\ Náger\ CV.pdf"; // URL del archivo PDF
+    const pdfURL = "/docs/Alejandro\ Náger\ Fernández\ CV\ EN.pdf"; // URL del archivo PDF
     const link = document.createElement("a"); // Crea un enlace temporal
     link.href = pdfURL;
-    link.download = "Alejandro Náger CV.pdf"; // Nombre del archivo que se descargará
+    link.download = "Alejandro Náger Fernández CV EN.pdf"; // Nombre del archivo que se descargará
     link.click();
   };
-  
 
   return (
     <section id="home" className="mt-24 lg:py-16">
@@ -37,42 +36,47 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br />
-            <TypeAnimation
-              sequence={[
-                "Alex",
-                3000,
-                "a Web Developer",
-                3000,
-                "a Computer Engineer",
-                3000,
-              ]}
-              speed={40}
-              deletionSpeed={60}
-              cursor={true}
-              repeat={Infinity}
-            />
+            <span className="block min-h-[5rem] sm:min-h-[4.5rem] lg:min-h-[5.5rem] mt-2">
+              <TypeAnimation
+                sequence={[
+                  "Alex",
+                  3000,
+                  "a Web Developer",
+                  3000,
+                  "a Computer Engineer",
+                  3000,
+                ]}
+                speed={40}
+                deletionSpeed={60}
+                cursor={true}
+                repeat={Infinity}
+              />
+            </span>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Welcome to my website! I&apos;m a student at the Polytechnic
-            University of Madrid (UPM) studying computer science engineering.
-            I&apos;m passionate about technology and constantly seeking to learn
-            new things and stay up-to-date with the latest trends in the
-            computer world.
+            Welcome to my website! I am a Computer Engineer specialising in
+            cybersecurity. Im working as a cybersecurity risk analyst for PwC and
+            finishing my master's degree in Defensive and Offensive
+            Cybersecurity. I&apos;m passionate about technology and constantly
+            seeking to learn new things and stay up-to-date with the latest
+            trends in the computer world.
           </p>
           <div>
-            <motion.button 
+            <motion.button
               onClick={scrollToContact}
               whileTap={{ scale: 0.7 }}
-              transition={{ scale: {duration: 0.2} }}
-              className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:text-white hover:from-secondary-500 hover:to-primary-500 text-black font-semibold">
-                Contact Me
+              transition={{ scale: { duration: 0.2 } }}
+              className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:text-white hover:from-secondary-500 hover:to-primary-500 text-black font-semibold"
+            >
+              Contact Me
             </motion.button>
             <Link href={""}>
               <motion.button
                 onClick={downloadCV}
                 whileTap={{ scale: 0.7 }}
-                transition={{ scale: {duration: 0.2} }}
-                className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-secondary-500 hover:to-primary-500 text-white font-semibold hover:font-bold mt-3">
+                transition={{ scale: { duration: 0.2 } }}
+                className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-secondary-500 hover:to-primary-500 text-white font-semibold hover:font-bold mt-3"
+              >
                 <span className="block bg-[#121212] hover:text-[#121212] hover:bg-white rounded-full px-5 py-2">
                   Download CV
                 </span>

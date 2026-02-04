@@ -35,11 +35,11 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-base md:text-lg">
-            As an engineering I have acquired a set of technical and
-            analytical skills that enable me to efficiently solve complex
-            problems. I feel comfortable working with programming languages 
-            and software development technologies, which allows me to quickly 
-            adapt to different environments and projects.
+            As an engineering I have acquired a set of technical and analytical
+            skills that enable me to efficiently solve complex problems. I feel
+            comfortable working with programming languages and software
+            development technologies, which allows me to quickly adapt to
+            different environments and projects.
           </p>
 
           <div className="flex flex-row justify-start mt-10">
@@ -76,7 +76,7 @@ const AboutSection = () => {
             {tabData.find((t) => t.id === tab).content}
           </div>
           <Link href={"/resume"}>
-            <div className="relative group">
+            <div className="relative group animate-bounce w-full lg:w-1/2 mx-auto">
               <button className="relative z-10 flex items-center justify-center bg-primary-500 text-white font-semibold rounded-full w-9/12 lg:w-1/2 py-2 px-4 mt-10 lg:mt-14 mb-16 mx-auto">
                 See more
               </button>

@@ -779,6 +779,12 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .block {
   display: block;
 }
@@ -839,6 +845,51 @@ video {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.min-h-\[\] {
+  min-height: ;
+}
+.min-h-\[3\] {
+  min-height: 3;
+}
+.min-h-\[3\.5rem\] {
+  min-height: 3.5rem;
+}
+.min-h-\[5\.5rem\] {
+  min-height: 5.5rem;
+}
+.min-h-\[4\.5rem\] {
+  min-height: 4.5rem;
+}
+.min-h-\[4\.6rem\] {
+  min-height: 4.6rem;
+}
+.min-h-\[4\.7rem\] {
+  min-height: 4.7rem;
+}
+.min-h-\[4\.8rem\] {
+  min-height: 4.8rem;
+}
+.min-h-\[4\.9rem\] {
+  min-height: 4.9rem;
+}
+.min-h-\[5rem\] {
+  min-height: 5rem;
+}
+.min-h-\[4\.95rem\] {
+  min-height: 4.95rem;
+}
+.min-h-\[4\.93rem\] {
+  min-height: 4.93rem;
+}
+.min-h-\[4\.94rem\] {
+  min-height: 4.94rem;
+}
+.min-h-\[4\.96rem\] {
+  min-height: 4.96rem;
+}
+.min-h-\[4\.97rem\] {
+  min-height: 4.97rem;
 }
 .w-10 {
   width: 2.5rem;
@@ -928,6 +979,30 @@ video {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+@keyframes pulse {
+
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes bounce {
+
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -989,6 +1064,36 @@ video {
 }
 .gap-y-1 {
   row-gap: 0.25rem;
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0px * var(--tw-space-y-reverse));
+}
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+.space-y-0\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.125rem * var(--tw-space-y-reverse));
 }
 .place-self-center {
   place-self: center;
@@ -1299,6 +1404,12 @@ video {
 .pt-12 {
   padding-top: 3rem;
 }
+.pl-6 {
+  padding-left: 1.5rem;
+}
+.pl-8 {
+  padding-left: 2rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1599,6 +1710,10 @@ body {
     margin-bottom: 0.5rem;
   }
 
+  .sm\:min-h-\[4\.5rem\] {
+    min-height: 4.5rem;
+  }
+
   .sm\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1642,6 +1757,10 @@ body {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mt-1 {
+    margin-top: 0.25rem;
   }
 
   .md\:block {
@@ -1719,6 +1838,10 @@ body {
     padding-top: 4rem;
   }
 
+  .md\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1791,6 +1914,26 @@ body {
     height: 400px;
   }
 
+  .lg\:min-h-\[5\.5rem\] {
+    min-height: 5.5rem;
+  }
+
+  .lg\:min-h-\[7\.5rem\] {
+    min-height: 7.5rem;
+  }
+
+  .lg\:min-h-\[8\.5rem\] {
+    min-height: 8.5rem;
+  }
+
+  .lg\:min-h-\[9\.5rem\] {
+    min-height: 9.5rem;
+  }
+
+  .lg\:min-h-\[12rem\] {
+    min-height: 12rem;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1835,6 +1978,10 @@ body {
 
   .lg\:pb-8 {
     padding-bottom: 2rem;
+  }
+
+  .lg\:pl-6 {
+    padding-left: 1.5rem;
   }
 
   .lg\:text-center {

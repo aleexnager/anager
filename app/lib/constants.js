@@ -25,8 +25,8 @@ export const tabData = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Universidad Politecnica de Madrid (UPM)</li>
-        <li>Cambridge Assessment English, Advance C1 </li>
+        <li>Computer Science Engineering, Universidad Politecnica de Madrid (UPM)</li>
+        <li>Advance C1, Cambridge Assessment English</li>
         <li>International Baccalaurate (IB diploma)</li>
       </ul>
     ),
@@ -180,7 +180,7 @@ export const swotTabs = [
     content: [
       "Without much experience in a professional environment",
       "Lacking important contacts",
-      "I am still finishing my studies",
+      "I am still finishing my cybersecurity master's degree",
     ],
     class: "rounded-lg",
   },
@@ -209,4 +209,4 @@ export const swotTabs = [
   },
 ];
 
-export const version = "v2.1.0";
+export const version = "v2.1.1";

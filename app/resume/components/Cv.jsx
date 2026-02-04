@@ -13,10 +13,10 @@ const Cv = () => {
   };
 
   const downloadCV = () => {
-    const pdfURL = "/docs/Alejandro Náger CV.pdf"; // URL del archivo PDF
+    const pdfURL = "/docs/Alejandro\ Náger\ Fernández\ CV\ EN.pdf"; // URL del archivo PDF
     const link = document.createElement("a"); // Crea un enlace temporal
     link.href = pdfURL;
-    link.download = "Alejandro Náger CV.pdf"; // Nombre del archivo que se descargará
+    link.download = "Alejandro Náger Fernández CV EN.pdf"; // Nombre del archivo que se descargará
     link.click();
   };
 
@@ -36,7 +36,7 @@ const Cv = () => {
             Resume
           </span>
         </motion.h1>
-        <Link
+        {/*<Link
           href={""}
           className="flex justify-center hover:text-primary-500 hover:underline lg:text-xl"
         >
@@ -47,7 +47,7 @@ const Cv = () => {
           >
             <p>INFOGRAPHIC MODEL AVAILABLE!</p>
           </motion.button>
-        </Link>
+        </Link>*/}
         <div className="flex flex-row justify-between items-center bg-[#33353F] rounded-md my-10 lg:my-12 p-2">
           <h1 className="font-semibold text-2xl lg:text-3xl ml-4 lg:ml-6 my-2 mr-8">
             Alejandro Náger
@@ -97,29 +97,155 @@ const Cv = () => {
         </div>
 
         <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-4 lg:mb-6">
-          About Me
+          Professional Summary
         </h1>
         <p className="mb-9 lg:text-lg lg:mb-12">
-          &nbsp;&nbsp;&nbsp;&nbsp;Based in Madrid, Spain. 23 year old highly
-          motivated computer science engineer that enjoys developing open source
-          code and web projects. I have the ambition of becoming an industry
-          expert as the head of my team.
+          Cybersecurity professional with experience in risk analysis and
+          management, IT auditing, and information security governance in
+          complex corporate environments. Currently working as a Cybersecurity
+          Risk Analyst at PwC, participating in projects aligned with regulatory
+          frameworks such as ENS, NIST, ISO 27001, and NIS2 for high-profile
+          clients. Possesses a strong technical background in full-stack .NET
+          software development, enabling a deep understanding of systems,
+          applications, and associated risks. Analytical profile, focused on
+          continuous improvement and driven by academic specialization in
+          cybersecurity.
         </p>
+
+        <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-4 lg:mb-6">
+          Work Experience
+        </h1>
+        <div className="mb-6 lg:text-lg">
+          <b>Cybersecurity Risk Analyst</b>
+          <br />
+          <em>August 2025-Present</em>
+          <br />
+          <b>PricewaterhouseCoopers (PwC) - Community of Madrid, Spain</b>
+          <ul className="list-disc pl-8 lg:pl-6 mt-1 space-y-2">
+            <li>
+              Cybersecurity risk analysis and management in complex
+              environments, aligned with regulatory and compliance frameworks
+              such as ENS, NIST, ISO 27001, NIS2, and Magerit.
+            </li>
+            <li>
+              Participation in IT Governance, Risk & Compliance (GRC) projects,
+              assessing security controls, process maturity, and regulatory
+              compliance.
+            </li>
+            <li>
+              Execution of IT audits and security assessments for large
+              organizations, including clients such as Redeia and CORPME.
+            </li>
+            <li>
+              Development of Threat & Vulnerability Management activities,
+              threat analysis, and support in Cyber Threat Intelligence for
+              strategic decision-making.
+            </li>
+            <li>
+              Use of tools and languages such as PILAR, SQL, and Python for risk
+              analysis, data processing, and task automation.
+            </li>
+            <li>
+              Collaborative work in multidisciplinary teams, contributing to the
+              preparation of executive and technical reports for different
+              organizational levels.
+            </li>
+          </ul>
+        </div>
+        <div className="mb-9 lg:text-lg lg:mb-12">
+          <b>Full Stack Software Engineer (.NET)</b>
+          <br />
+          <em>June 2024 - August 2025</em>
+          <br />
+          <b>NalCOM Servicios Informáticos - Community of Madrid, Spain</b>
+          <ul className="list-disc pl-8 lg:pl-6 mt-1 space-y-2">
+            <li>
+              Development of full-stack web applications based on .NET
+              technologies, applying MVC architectures and software engineering
+              best practices.
+            </li>
+            <li>
+              Implementation of backend functionalities using C# and Entity
+              Framework, and frontend development with JavaScript, HTML5, CSS,
+              and Bootstrap.
+            </li>
+            <li>
+              Design and management of relational databases using Microsoft SQL
+              Server, optimizing queries and data models.
+            </li>
+            <li>
+              Participation in projects for clients in the pharmaceutical
+              sector, such as Novo Nordisk, working in professional,
+              business-oriented environments.
+            </li>
+            <li>
+              Use of Azure DevOps Server for version control, task management,
+              and continuous deployment.
+            </li>
+            <li>
+              Teamwork following structured methodologies, with a focus on
+              quality, maintainability, and compliance with technical
+              requirements.
+            </li>
+          </ul>
+        </div>
+
+        <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-3">
+          Education
+        </h1>
+        <ul>
+          <li className="mb-3 lg:text-lg">
+            <b>
+              <em>Master's Degree Student in Cybersecurity</em>
+            </b>
+            <br />
+            <em>Complutense University of Madrid (UCM)</em>
+            <br />
+            Currently studying at Madrid while working for PwC and focused on
+            finishing my Master's degree in defensive and offensive
+            cybersecurity.
+          </li>
+          <li className="mb-3 lg:text-lg">
+            <b>Bachelor's Degree in Computer Engineering</b>
+            <br />
+            <em>Polythechnic University of Madrid (UPM)</em>
+            <br />
+            Graduated as a Computer Engineer at UPM, where I developed my final
+            project on steganography and learned advanced programming and
+            engineering concepts.
+          </li>
+          <li className="mb-3 lg:text-lg">
+            <b>Cambridge Assessment English</b>
+            <br />
+            <em>Advanced C1</em>
+            <br />
+            Advanced english language official certificate from Cambridge
+            School.
+          </li>
+          <li className="mb-9 lg:text-lg lg:mb-12">
+            <b>International Baccalaureate (IB)</b>
+            <br />
+            <em>IB diploma</em>
+            <br />
+            International Baccalaureate diploma obtained in Mirabal
+            International School (Madrid, Spain) where I studied until my
+            graduation.
+          </li>
+        </ul>
 
         <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-4 lg:mb-6">
           Technical Skills
         </h1>
         <p className="mb-3 lg:text-lg">
-          <b>Programming Languages:</b> Java, JavaScript, C, C#, Python, SQL,
-          HTML, CSS.
+          <b>Programming Languages:</b> Python, C, C#, Java, JavaScript, SQL.
         </p>
         <p className="mb-3 lg:text-lg">
-          <b>Technologies/Frameworks:</b> NEXT.js, .NET Core, Entity Framework,
-          Git, AWS, Docker.
+          <b>Technologies/Frameworks:</b> NEXT.js, Node.js, .NET Core, Entity
+          Framework, Git, AWS, Docker.
         </p>
         <p className="mb-9 lg:text-lg lg:mb-12">
-          <b>Developer Tools:</b> Visual Studio Code, IntelliJ IDEA, Eclipse,
-          GitHub, GitLab, Postman API.
+          <b>Tools:</b> Wireshark, Nmap, Metasploit, Burp Suite, SQLMap, John
+          the Ripper, Aircrack-ng,Hydra, Tennable.
         </p>
 
         <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-4 lg:mb-6">
@@ -129,53 +255,6 @@ const Cv = () => {
           <b>Soft Skills:</b> Comunication with teammates | Presentations to
           large audiences | R&D vision | Quick Learner.
         </p>
-
-        <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-3">
-          Education
-        </h1>
-        <li className="mb-3 lg:text-lg">
-          <b>Universidad Politecnica de Madrid</b>
-          <br />
-          <em>Graduated, Computer Science Engineering</em>
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;Currently studying at Madrid and focused on
-          finishing my Bachelor's degree and I will pursue a master's degree in
-          Cybersecurity.
-        </li>
-        <li className="mb-3 lg:text-lg">
-          <b>Cambridge Assessment English</b>
-          <br />
-          <em>Advanced C1</em>
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;Advanced english language official certificate
-          from Cambridge School.
-        </li>
-        <li className="mb-9 lg:text-lg lg:mb-12">
-          <b>International Baccalaureate (IB)</b>
-          <br />
-          <em>IB diploma</em>
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;International Baccalaureate diploma obtained
-          in Mirabal International School (Madrid, Spain) where I studied until
-          my graduation.
-        </li>
-
-        <h1 className="flex justify-center font-semibold text-2xl lg:text-3xl underline mb-4 lg:mb-6">
-          Professional Experience
-        </h1>
-        <li className="mb-3 lg:text-lg">
-          <b>Cybersecurity Risk Analyst <i>(2025-Present)</i>:</b>
-          &nbsp;&nbsp;Currently working as a Cybersecurity Risk Analyst at PwC
-          Spain. My main role is to help clients identify and manage any possible vulnerability their systems have. This involves performing security assessments, analyzing risks, and proposing mitigation strategies to ensure the safety of their digital assets.
-        </li>
-        <li className="mb-9 lg:text-lg lg:mb-12">
-          <b>Full Stack Software Engineer <i>(2024-2025)</i>:</b>
-          &nbsp;&nbsp;My main role was to work in a team, developing software
-          for other businesses. The software was develop using various tools and
-          technologies, but I mainly worked with .NET Core and Entity Framework.
-          Thanks to the variety of projects I worked in, I was able to learn
-          deeply about databases, web management and teamworking.
-        </li>
       </div>
     </section>
   );
